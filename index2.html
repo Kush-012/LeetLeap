@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com/3.3.5"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style type="text/tailwindcss">
-          .navbar-blur {
+        .navbar-blur {
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.95);
         } 
@@ -70,31 +70,69 @@
         .animate-fadeIn {
             animation: fadeIn 0.3s ease-out;
         }
+        /* Compatibility with average.html styles */
+        .mcq-option {
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+        .mcq-option:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+        .mcq-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+            font-weight: 600;
+        }
+        .mcq-option.incorrect {
+            background-color: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+            font-weight: 600;
+        }
+        .mcq-answer-text {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+        @media print {
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+            }
+            .mcq-option {
+                break-inside: avoid;
+            }
+            .border {
+                border: 1px solid #d1d5db !important;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen bg-gray-50">
-    
-
-
-
- <nav class="sticky top-0 z-50 border-b border-gray-200 shadow-sm navbar-blur">
+    <nav class="sticky top-0 z-50 border-b border-gray-200 shadow-sm navbar-blur">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo and Brand -->
                 <div class="flex items-center">
                     <div class="flex items-center flex-shrink-0">
-                        <span class="text-2xl font-bold text-blue-600 cursor-pointer logo-animation">&lt;/&gt;</span>
+                        <span class="text-2xl font-bold text-blue-600 cursor-pointer logo-animation"></></span>
                         <span class="hidden ml-3 text-2xl font-semibold text-blue-600 sm:block">LeetLeap</span>
                     </div>
                 </div>
-
                 <!-- Desktop Navigation -->
                 <div class="hidden md:block">
                     <div class="flex items-baseline ml-10 space-x-4">
                         <a href="index.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
                             <i class="mr-1 fas fa-home"></i> Home
                         </a>
-                       
                         <a href="mixed.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
                             <i class="mr-1 fas fa-tasks"></i> Practice
                         </a>
@@ -106,15 +144,12 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- CTA Button -->
                 <div class="justify-center sm:flex-row">
-                <a href="index.html" class="btn-primary">
-                    <i class="mr-2 fas fa-rocket"></i> Start Learning
-                </a>
-                
-            </div>
-
+                    <a href="index.html" class="btn-primary">
+                        <i class="mr-2 fas fa-rocket"></i> Start Learning
+                    </a>
+                </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="p-2 text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
@@ -123,24 +158,21 @@
                 </div>
             </div>
         </div>
-
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg md:hidden mobile-menu">
             <div class="flex items-center justify-between p-4 border-b border-gray-200">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold text-blue-600">&lt;/&gt;</span>
+                    <span class="text-xl font-bold text-blue-600"></></span>
                     <span class="ml-2 text-lg font-semibold text-gray-800">Menu</span>
                 </div>
                 <button id="close-mobile-menu" class="p-1 text-gray-500 hover:text-gray-700">
                     <i class="text-xl fas fa-times"></i>
                 </button>
             </div>
-            
             <div class="p-4 space-y-2 bg-black">
                 <a href="index.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
                     <i class="w-5 mr-3 fas fa-home"></i> Home
                 </a>
-                 
                 <a href="mixed.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
                     <i class="w-5 mr-3 fas fa-tasks"></i> Practice
                 </a>
@@ -150,26 +182,17 @@
                 <a href="about.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
                     <i class="w-5 mr-3 fas fa-info-circle"></i> About
                 </a>
-                
-    <div class="pt-4 border-t border-gray-200">
-  <a href="index"
-     class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
-    <i class="mr-2 fa-solid fa-play"></i> Start Learning
-  </a>
-</div>
-
-
-
+                <div class="pt-4 border-t border-gray-200">
+                    <a href="index.html" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
+                        <i class="mr-2 fa-solid fa-play"></i> Start Learning
+                    </a>
+                </div>
             </div>
         </div>
-
         <!-- Mobile menu overlay -->
         <div id="mobile-overlay" class="fixed inset-0 z-40 hidden bg-black bg-opacity-50 md:hidden"></div>
     </nav>
 
-
-
-    
     <div class="container max-w-full p-4 mx-auto">
         <div class="flex flex-col gap-8 lg:flex-row">
             <!-- Topics Sidebar -->
@@ -187,7 +210,6 @@
                             <p class="mt-2 text-sm text-gray-600">Practice problems and explanations for all analytical topics.</p>
                         </div>
                     </section>
-                    
                     <!-- Topics Section -->
                     <section class="mb-8">
                         <h2 class="flex items-center pb-3 mb-4 text-xl font-semibold text-blue-800 border-b border-gray-200">
@@ -197,7 +219,6 @@
                             <!-- Topics will be populated by JavaScript -->
                         </div>
                     </section>
-                    
                     <!-- Practice Section -->
                     <section>
                         <h2 class="flex items-center pb-3 mb-4 text-xl font-semibold text-blue-800 border-b border-gray-200">
@@ -212,7 +233,6 @@
                     </section>
                 </div>
             </aside>
-            
             <!-- Main Content Area -->
             <main class="w-full p-6 bg-white shadow-md rounded-xl lg:w-3/4">
                 <div class="flex items-center justify-between mb-6">
@@ -223,7 +243,6 @@
                         Click options to check answers
                     </div>
                 </div>
-                
                 <!-- Content Area -->
                 <div id="contentArea">
                     <!-- Content will be loaded dynamically -->
@@ -235,7 +254,7 @@
             </main>
         </div>
     </div>
-    
+
     <!-- Footer -->
     <footer class="p-6 mt-12 text-center text-gray-600 bg-white border-t border-gray-200">
         <p>© <span id="currentYear"></span> Analytical Skills Practice. All rights reserved.</p>
@@ -243,7 +262,7 @@
     </footer>
 
     <script>
-        // Topics configuration - mapping topic names to HTML files
+        // Topics configuration
         const topics = {
             'Vedic Maths': 'vedic.html',
             'Number System': 'number.html',
@@ -266,20 +285,16 @@
         };
 
         let selectedTopic = '';
+        let answeredQuestions = new Set();
+        let correctAnswers = 0;
+        let totalQuestions = 0; // Will be set dynamically based on loaded content
 
         // Initialize the page
         function init() {
-            // Set current year
             document.getElementById('currentYear').textContent = new Date().getFullYear();
-            
-            // Get selected topic from URL or default to first topic
             const urlParams = new URLSearchParams(window.location.search);
             selectedTopic = urlParams.get('topic') || Object.keys(topics)[0];
-            
-            // Render topics list
             renderTopicsList();
-            
-            // Load selected topic content
             loadTopicContent(selectedTopic);
         }
 
@@ -287,17 +302,14 @@
         function renderTopicsList() {
             const topicsListElement = document.getElementById('topicsList');
             topicsListElement.innerHTML = '';
-
             Object.keys(topics).forEach(topic => {
                 const topicItem = document.createElement('div');
                 topicItem.className = `topic-item ${selectedTopic === topic ? 'active' : ''}`;
                 topicItem.onclick = () => selectTopic(topic);
-                
                 topicItem.innerHTML = `
                     <i class="mr-2 fas ${selectedTopic === topic ? 'fa-check-circle' : 'fa-circle'}"></i>
                     ${topic}
                 `;
-                
                 topicsListElement.appendChild(topicItem);
             });
         }
@@ -305,53 +317,34 @@
         // Select a topic
         function selectTopic(topic) {
             selectedTopic = topic;
-            
-            // Update URL without page reload
             const url = new URL(window.location);
             url.searchParams.set('topic', topic);
             window.history.pushState({}, '', url);
-            
-            // Update UI
             renderTopicsList();
             loadTopicContent(topic);
         }
 
         // Load topic content from HTML file
         async function loadTopicContent(topic) {
-            // Update title
             document.getElementById('selectedTopicTitle').textContent = topic;
-            
             const contentArea = document.getElementById('contentArea');
             const fileName = topics[topic];
-            
-            // Show loading state
             contentArea.innerHTML = `
                 <div class="flex items-center justify-center p-8">
                     <div class="mr-3 loading-spinner"></div>
                     <span class="text-gray-500">Loading ${topic}...</span>
                 </div>
             `;
-            
             try {
-                // Fetch the HTML content from the file
                 const response = await fetch(fileName);
-                
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                
                 const htmlContent = await response.text();
-                
-                // Load the content into the content area
                 contentArea.innerHTML = htmlContent;
-                
-                // Re-initialize any interactive elements if needed
                 initializeInteractiveElements();
-                
             } catch (error) {
                 console.error('Error loading content:', error);
-                
-                // Show error message or fallback content
                 contentArea.innerHTML = `
                     <div class="p-8 text-center text-gray-500 rounded-lg bg-red-50">
                         <i class="mb-4 text-4xl text-red-400 fas fa-exclamation-triangle"></i>
@@ -365,69 +358,120 @@
             }
         }
 
-        // Initialize interactive elements after content is loaded
+        // Initialize interactive elements
         function initializeInteractiveElements() {
-            // Add click handlers for MCQ options if they exist in the loaded content
+            // Reset progress tracking
+            answeredQuestions.clear();
+            correctAnswers = 0;
+            totalQuestions = document.querySelectorAll('[id^="mcq"]').length;
+            updateProgress();
+
+            // Add click handlers for MCQ options
             const mcqOptions = document.querySelectorAll('.mcq-option');
             mcqOptions.forEach(option => {
-                if (!option.onclick) { // Only add if not already assigned
+                if (!option.onclick) {
                     option.onclick = function() {
                         selectOption(this);
                     };
                 }
             });
+
+            // Add click handlers for answer buttons
+            const answerButtons = document.querySelectorAll('.mcq-answer-btn');
+            answerButtons.forEach(button => {
+                if (!button.onclick) {
+                    button.onclick = function() {
+                        toggleAnswer(this);
+                    };
+                }
+            });
         }
 
-        // Handle MCQ option selection (if your HTML files contain MCQs)
+        // Handle MCQ option selection
         function selectOption(element) {
-            // Remove previous selections from the same question
-            const questionContainer = element.closest('.mcq-question, .question-container, .bg-white');
-            if (questionContainer) {
-                const options = questionContainer.querySelectorAll('.mcq-option');
-                options.forEach(option => {
-                    option.classList.remove('correct', 'incorrect', 'selected');
-                });
-            }
+            const mcqContainer = element.closest('[id^="mcq"]');
+            if (!mcqContainer) return;
+            const mcqId = mcqContainer.id.replace('mcq', '');
+            const options = mcqContainer.querySelectorAll('.mcq-option');
 
-            // Add selected class
-            element.classList.add('selected');
-            
-            // Check if this option has data attributes for correct/incorrect
-            const isCorrect = element.dataset.correct === 'true';
-            
-            if (isCorrect) {
-                element.classList.add('correct');
-            } else {
-                element.classList.add('incorrect');
-            }
+            // Clear previous selections
+            options.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect', 'selected');
+            });
 
-            // Show explanation if it exists
-            const explanation = questionContainer?.querySelector('.answer-explanation, .mcq-answer-text');
-            if (explanation) {
-                explanation.classList.remove('hidden');
-                explanation.style.display = 'block';
+            // Mark all correct answers and the selected answer
+            let isCorrect = false;
+            options.forEach(opt => {
+                if (opt.hasAttribute('data-correct') && opt.getAttribute('data-correct') === 'true') {
+                    opt.classList.add('correct');
+                    if (opt === element) {
+                        isCorrect = true;
+                    }
+                } else if (opt === element) {
+                    opt.classList.add('incorrect');
+                }
+            });
+
+            // Update progress if this question hasn't been answered
+            if (!answeredQuestions.has(mcqId)) {
+                answeredQuestions.add(mcqId);
+                if (isCorrect) {
+                    correctAnswers++;
+                }
+                updateProgress();
             }
         }
 
-        // Initialize the application when DOM is loaded
-        document.addEventListener('DOMContentLoaded', init);
+        // Handle answer button toggle
+        function toggleAnswer(button) {
+            const mcqId = button.getAttribute('data-mcq');
+            const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
+            if (answer) {
+                answer.classList.toggle('hidden');
+                if (answer.classList.contains('hidden')) {
+                    button.textContent = 'View Answer';
+                } else {
+                    button.textContent = 'Hide Answer';
+                    answer.classList.add('fade-in');
+                }
+            }
+        }
 
-        // Handle browser back/forward buttons
-        window.addEventListener('popstate', function(event) {
-            const urlParams = new URLSearchParams(window.location.search);
-            const topic = urlParams.get('topic') || Object.keys(topics)[0];
-            selectedTopic = topic;
-            renderTopicsList();
-            loadTopicContent(topic);
-        });
+        // Update progress bar and results
+        function updateProgress() {
+            const progressPercentage = totalQuestions ? (answeredQuestions.size / totalQuestions) * 100 : 0;
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            if (progressBar && progressText) {
+                progressBar.style.width = progressPercentage + '%';
+                progressText.textContent = `${answeredQuestions.size}/${totalQuestions} completed`;
+            }
 
-          const mobileMenuButton = document.getElementById('mobile-menu-button');
+            if (answeredQuestions.size === totalQuestions) {
+                showResults();
+            }
+        }
+
+        // Show results summary
+        function showResults() {
+            const resultsDiv = document.getElementById('results-summary');
+            if (resultsDiv) {
+                resultsDiv.classList.remove('hidden');
+                resultsDiv.classList.add('fade-in');
+                const incorrectAnswers = answeredQuestions.size - correctAnswers;
+                const scorePercentage = totalQuestions ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+                document.getElementById('correct-count').textContent = correctAnswers;
+                document.getElementById('incorrect-count').textContent = incorrectAnswers;
+                document.getElementById('score-percentage').textContent = scorePercentage + '%';
+                resultsDiv.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const closeMobileMenu = document.getElementById('close-mobile-menu');
         const mobileOverlay = document.getElementById('mobile-overlay');
-        const mobileTopicsToggle = document.getElementById('mobile-topics-toggle');
-        const mobileTopicsContent = document.getElementById('mobile-topics-content');
-        const mobileTopicsArrow = document.getElementById('mobile-topics-arrow');
 
         function openMobileMenu() {
             mobileMenu.classList.add('open');
@@ -445,24 +489,24 @@
         closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
         mobileOverlay.addEventListener('click', closeMobileMenuFunc);
 
-        // Mobile topics accordion
-        mobileTopicsToggle.addEventListener('click', () => {
-            const isHidden = mobileTopicsContent.classList.contains('hidden');
-            if (isHidden) {
-                mobileTopicsContent.classList.remove('hidden');
-                mobileTopicsArrow.style.transform = 'rotate(180deg)';
-            } else {
-                mobileTopicsContent.classList.add('hidden');
-                mobileTopicsArrow.style.transform = 'rotate(0deg)';
-            }
-        });
-
         // Close mobile menu on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeMobileMenuFunc();
             }
         });
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function(event) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const topic = urlParams.get('topic') || Object.keys(topics)[0];
+            selectedTopic = topic;
+            renderTopicsList();
+            loadTopicContent(topic);
+        });
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
 </html>

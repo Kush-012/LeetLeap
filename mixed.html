@@ -1,11 +1,9 @@
-
-       
 <!DOCTYPE html>
 <html>
 <head>
     <script src="https://cdn.tailwindcss.com/3.3.5"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <style>
+    <style>
         .navbar-blur {
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.95);
@@ -27,16 +25,13 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    
-
-
- <nav class="sticky top-0 z-50 border-b border-gray-200 shadow-sm navbar-blur">
+    <nav class="sticky top-0 z-50 border-b border-gray-200 shadow-sm navbar-blur">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo and Brand -->
                 <div class="flex items-center">
                     <div class="flex items-center flex-shrink-0">
-                        <span class="text-2xl font-bold text-blue-600 cursor-pointer logo-animation">&lt;/&gt;</span>
+                        <span class="text-2xl font-bold text-blue-600 cursor-pointer logo-animation"></></span>
                         <span class="hidden ml-3 text-2xl font-semibold text-blue-600 sm:block">LeetLeap</span>
                     </div>
                 </div>
@@ -47,7 +42,6 @@
                         <a href="index2.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
                             <i class="mr-1 fas fa-home"></i> Home
                         </a>
-                       
                         <a href="mixed.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
                             <i class="mr-1 fas fa-tasks"></i> Practice
                         </a>
@@ -62,11 +56,10 @@
 
                 <!-- CTA Button -->
                 <div class="justify-center sm:flex-row">
-                <a href="index2.html" class="btn-primary">
-                    <i class="mr-2 fas fa-rocket"></i> Start Learning
-                </a>
-                
-            </div>
+                    <a href="index2.html" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
+                        <i class="mr-2 fas fa-rocket"></i> Start Learning
+                    </a>
+                </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
@@ -81,7 +74,7 @@
         <div id="mobile-menu" class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg md:hidden mobile-menu">
             <div class="flex items-center justify-between p-4 border-b border-gray-200">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold text-blue-600">&lt;/&gt;</span>
+                    <span class="text-xl font-bold text-blue-600"></></span>
                     <span class="ml-2 text-lg font-semibold text-gray-800">Menu</span>
                 </div>
                 <button id="close-mobile-menu" class="p-1 text-gray-500 hover:text-gray-700">
@@ -93,7 +86,6 @@
                 <a href="index2.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
                     <i class="w-5 mr-3 fas fa-home"></i> Home
                 </a>
-                 
                 <a href="mixed.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
                     <i class="w-5 mr-3 fas fa-tasks"></i> Practice
                 </a>
@@ -103,16 +95,11 @@
                 <a href="about.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
                     <i class="w-5 mr-3 fas fa-info-circle"></i> About
                 </a>
-                
-    <div class="pt-4 border-t border-gray-200">
-  <a href="index2.html"
-     class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
-    <i class="mr-2 fa-solid fa-play"></i> Start Learning
-  </a>
-</div>
-
-
-
+                <div class="pt-4 border-t border-gray-200">
+                    <a href="index2.html" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
+                        <i class="mr-2 fa-solid fa-play"></i> Start Learning
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -120,556 +107,531 @@
         <div id="mobile-overlay" class="fixed inset-0 z-40 hidden bg-black bg-opacity-50 md:hidden"></div>
     </nav>
 
-
-
-
-    
-    
     <div class="container max-w-4xl px-4 py-8 mx-auto">
         <div class="overflow-hidden bg-white shadow-md card rounded-xl">
             <div class="p-8">
                 <h2 class="pb-4 mb-6 text-3xl font-bold text-blue-800 border-b-2 border-gray-200">Practice MCQs</h2>
                 <div class="space-y-6">
-                
-  <div id="mcq1" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">1. Using Vedic Mathematics, what is 97 × 103?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. 9991</div>
-                <div class="mcq-option">B. 9981</div>
-                <div class="mcq-option">C. 10001</div>
-                <div class="mcq-option">D. 10091</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="1">
-                <span class="font-semibold text-green-600">Correct Answer: A. 9991</span><br>
-                <p class="mt-2">Using (100-3)(100+3) = 100² - 3² = 10000 - 9 = 9991</p>
-            </div>
-        </div>
+                    <div id="mcq1" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">1. Using Vedic Mathematics, what is 97 × 103?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. 9991</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 9981</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 10001</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 10091</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="1">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 9991</span><br>
+                            <p class="mt-2">Using (100-3)(100+3) = 100² - 3² = 10000 - 9 = 9991</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 2 -->
-        <div id="mcq2" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">2. How many factors does 72 have?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 10</div>
-                <div class="mcq-option" data-correct="true">B. 12</div>
-                <div class="mcq-option">C. 14</div>
-                <div class="mcq-option">D. 16</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="2">
-                <span class="font-semibold text-green-600">Correct Answer: B. 12</span><br>
-                <p class="mt-2">72 = 2³ × 3². Number of factors = (3+1)(2+1) = 4×3 = 12</p>
-            </div>
-        </div>
+                    <div id="mcq2" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">2. How many factors does 72 have?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 10</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. 12</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 14</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 16</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="2">
+                            <span class="font-semibold text-green-600">Correct Answer: B. 12</span><br>
+                            <p class="mt-2">72 = 2³ × 3². Number of factors = (3+1)(2+1) = 4×3 = 12</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 3 -->
-        <div id="mcq3" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">3. The average of 5 numbers is 40. If one number 50 is replaced by 80, what is the new average?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. 46</div>
-                <div class="mcq-option">B. 44</div>
-                <div class="mcq-option">C. 42</div>
-                <div class="mcq-option">D. 48</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="3">
-                <span class="font-semibold text-green-600">Correct Answer: A. 46</span><br>
-                <p class="mt-2">Increase = 80-50 = 30. New average = 40 + 30/5 = 40 + 6 = 46</p>
-            </div>
-        </div>
+                    <div id="mcq3" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">3. The average of 5 numbers is 40. If one number 50 is replaced by 80, what is the new average?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. 46</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 44</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 42</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 48</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="3">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 46</span><br>
+                            <p class="mt-2">Increase = 80-50 = 30. New average = 40 + 30/5 = 40 + 6 = 46</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 4 -->
-        <div id="mcq4" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">4. If 25% of a number is 60, then 40% of the same number is:</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 90</div>
-                <div class="mcq-option" data-correct="true">B. 96</div>
-                <div class="mcq-option">C. 100</div>
-                <div class="mcq-option">D. 84</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="4">
-                <span class="font-semibold text-green-600">Correct Answer: B. 96</span><br>
-                <p class="mt-2">Number = 60 ÷ 0.25 = 240. 40% of 240 = 0.40 × 240 = 96</p>
-            </div>
-        </div>
+                    <div id="mcq4" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">4. If 25% of a number is 60, then 40% of the same number is:</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 90</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. 96</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 100</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 84</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="4">
+                            <span class="font-semibold text-green-600">Correct Answer: B. 96</span><br>
+                            <p class="mt-2">Number = 60 ÷ 0.25 = 240. 40% of 240 = 0.40 × 240 = 96</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 5 -->
-        <div id="mcq5" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">5. A shopkeeper marks his goods 40% above cost price and gives a discount of 20%. His profit percentage is:</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. 12%</div>
-                <div class="mcq-option">B. 15%</div>
-                <div class="mcq-option">C. 18%</div>
-                <div class="mcq-option">D. 20%</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="5">
-                <span class="font-semibold text-green-600">Correct Answer: A. 12%</span><br>
-                <p class="mt-2">Let CP = 100. MP = 140. SP = 140 × 0.8 = 112. Profit% = 12%</p>
-            </div>
-        </div>
+                    <div id="mcq5" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">5. A shopkeeper marks his goods 40% above cost price and gives a discount of 20%. His profit percentage is:</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. 12%</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 15%</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 18%</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 20%</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="5">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 12%</span><br>
+                            <p class="mt-2">Let CP = 100. MP = 140. SP = 140 × 0.8 = 112. Profit% = 12%</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 6 -->
-        <div id="mcq6" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">6. The difference between compound interest and simple interest on ₹8000 for 2 years at 5% per annum is:</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. ₹20</div>
-                <div class="mcq-option">B. ₹25</div>
-                <div class="mcq-option">C. ₹30</div>
-                <div class="mcq-option">D. ₹40</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="6">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="6">
-                <span class="font-semibold text-green-600">Correct Answer: A. ₹20</span><br>
-                <p class="mt-2">Difference = P(R/100)² = 8000 × (5/100)² = 8000 × 0.0025 = ₹20</p>
-            </div>
-        </div>
+                    <div id="mcq6" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">6. The difference between compound interest and simple interest on ₹8000 for 2 years at 5% per annum is:</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. ₹20</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. ₹25</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. ₹30</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. ₹40</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="6">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="6">
+                            <span class="font-semibold text-green-600">Correct Answer: A. ₹20</span><br>
+                            <p class="mt-2">Difference = P(R/100)² = 8000 × (5/100)² = 8000 × 0.0025 = ₹20</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 7 -->
-        <div id="mcq7" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">7. Find the next term in the series: 5, 11, 23, 47, 95, ?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. 191</div>
-                <div class="mcq-option">B. 189</div>
-                <div class="mcq-option">C. 193</div>
-                <div class="mcq-option">D. 187</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="7">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="7">
-                <span class="font-semibold text-green-600">Correct Answer: A. 191</span><br>
-                <p class="mt-2">Pattern: ×2 + 1. 5×2+1=11, 11×2+1=23, 23×2+1=47, 47×2+1=95, 95×2+1=191</p>
-            </div>
-        </div>
+                    <div id="mcq7" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">7. Find the next term in the series: 5, 11, 23, 47, 95, ?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. 191</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 189</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 193</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 187</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="7">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="7">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 191</span><br>
+                            <p class="mt-2">Pattern: ×2 + 1. 5×2+1=11, 11×2+1=23, 23×2+1=47, 47×2+1=95, 95×2+1=191</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 8 -->
-        <div id="mcq8" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">8. If CODING is written as DPMJOH, then MATHS is written as:</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. NBUFT</div>
-                <div class="mcq-option">B. NBUHT</div>
-                <div class="mcq-option">C. NBUIT</div>
-                <div class="mcq-option">D. NBUUT</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="8">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="8">
-                <span class="font-semibold text-green-600">Correct Answer: A. NBUFT</span><br>
-                <p class="mt-2">Each letter is replaced by the next letter in alphabet: M→N, A→B, T→U, H→I, S→T</p>
-            </div>
-        </div>
+                    <div id="mcq8" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">8. If CODING is written as DPMJOH, then MATHS is written as:</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. NBUFT</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. NBUHT</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. NBUIT</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. NBUUT</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="8">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="8">
+                            <span class="font-semibold text-green-600">Correct Answer: A. NBUFT</span><br>
+                            <p class="mt-2">Each letter is replaced by the next letter in alphabet: M→N, A→B, T→U, H→I, S→T</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 9 -->
-        <div id="mcq9" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">9. The ratio of ages of A and B is 3:4. After 6 years, the ratio becomes 4:5. What is A's present age?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. 18 years</div>
-                <div class="mcq-option">B. 15 years</div>
-                <div class="mcq-option">C. 12 years</div>
-                <div class="mcq-option">D. 21 years</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="9">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="9">
-                <span class="font-semibold text-green-600">Correct Answer: A. 18 years</span><br>
-                <p class="mt-2">Let ages be 3x and 4x. After 6 years: (3x+6)/(4x+6) = 4/5. Solving: x = 6. A's age = 18</p>
-            </div>
-        </div>
+                    <div id="mcq9" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">9. The ratio of ages of A and B is 3:4. After 6 years, the ratio becomes 4:5. What is A's present age?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. 18 years</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 15 years</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 12 years</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 21 years</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="9">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="9">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 18 years</span><br>
+                            <p class="mt-2">Let ages be 3x and 4x. After 6 years: (3x+6)/(4x+6) = 4/5. Solving: x = 6. A's age = 18</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 10 -->
-        <div id="mcq10" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">10. In what ratio should tea costing ₹60/kg be mixed with tea costing ₹80/kg to get a mixture worth ₹70/kg?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. 1:1</div>
-                <div class="mcq-option">B. 1:2</div>
-                <div class="mcq-option">C. 2:1</div>
-                <div class="mcq-option">D. 3:2</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="10">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="10">
-                <span class="font-semibold text-green-600">Correct Answer: A. 1:1</span><br>
-                <p class="mt-2">Using alligation: (80-70):(70-60) = 10:10 = 1:1</p>
-            </div>
-        </div>
+                    <div id="mcq10" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">10. In what ratio should tea costing ₹60/kg be mixed with tea costing ₹80/kg to get a mixture worth ₹70/kg?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. 1:1</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 1:2</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 2:1</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 3:2</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="10">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="10">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 1:1</span><br>
+                            <p class="mt-2">Using alligation: (80-70):(70-60) = 10:10 = 1:1</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 11 -->
-        <div id="mcq11" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">11. In how many ways can the letters of the word ARRANGE be arranged?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 420</div>
-                <div class="mcq-option">B. 630</div>
-                <div class="mcq-option">C. 840</div>
-                <div class="mcq-option" data-correct="true">D. 1260</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="11">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="11">
-                <span class="font-semibold text-green-600">Correct Answer: D. 1260</span><br>
-                <p class="mt-2">7 letters with R repeated 2 times, A repeated 2 times: 7!/(2!×2!) = 5040/4 = 1260</p>
-            </div>
-        </div>
+                    <div id="mcq11" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">11. In how many ways can the letters of the word ARRANGE be arranged?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 420</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 630</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 840</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">D. 1260</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="11">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="11">
+                            <span class="font-semibold text-green-600">Correct Answer: D. 1260</span><br>
+                            <p class="mt-2">7 letters with R repeated 2 times, A repeated 2 times: 7!/(2!×2!) = 5040/4 = 1260</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 12 -->
-        <div id="mcq12" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">12. From a pack of 52 cards, what is the probability of drawing a face card?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. 3/13</div>
-                <div class="mcq-option">B. 4/13</div>
-                <div class="mcq-option">C. 1/4</div>
-                <div class="mcq-option">D. 1/13</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="12">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="12">
-                <span class="font-semibold text-green-600">Correct Answer: A. 3/13</span><br>
-                <p class="mt-2">Face cards = 12 (J,Q,K of each suit). Probability = 12/52 = 3/13</p>
-            </div>
-        </div>
+                    <div id="mcq12" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">12. From a pack of 52 cards, what is the probability of drawing a face card?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. 3/13</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 4/13</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 1/4</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 1/13</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="12">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="12">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 3/13</span><br>
+                            <p class="mt-2">Face cards = 12 (J,Q,K of each suit). Probability = 12/52 = 3/13</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 13 -->
-        <div id="mcq13" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">13. A is the brother of B. B is the sister of C. C is the father of D. How is D related to A?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. Nephew</div>
-                <div class="mcq-option">B. Niece</div>
-                <div class="mcq-option">C. Son</div>
-                <div class="mcq-option" data-correct="true">D. Cannot be determined</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="13">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="13">
-                <span class="font-semibold text-green-600">Correct Answer: D. Cannot be determined</span><br>
-                <p class="mt-2">D could be A's nephew or niece depending on D's gender</p>
-            </div>
-        </div>
+                    <div id="mcq13" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">13. A is the brother of B. B is the sister of C. C is the father of D. How is D related to A?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. Nephew</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. Niece</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. Son</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">D. Cannot be determined</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="13">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="13">
+                            <span class="font-semibold text-green-600">Correct Answer: D. Cannot be determined</span><br>
+                            <p class="mt-2">D could be A's nephew or niece depending on D's gender</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 14 -->
-        <div id="mcq14" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">14. Rohit walks 10m North, then 15m East, then 10m South, then 5m West. How far is he from the starting point?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 8m</div>
-                <div class="mcq-option" data-correct="true">B. 10m</div>
-                <div class="mcq-option">C. 12m</div>
-                <div class="mcq-option">D. 15m</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="14">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="14">
-                <span class="font-semibold text-green-600">Correct Answer: B. 10m</span><br>
-                <p class="mt-2">Final position: 10m East of start. Distance = 10m</p>
-            </div>
-        </div>
+                    <div id="mcq14" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">14. Rohit walks 10m North, then 15m East, then 10m South, then 5m West. How far is he from the starting point?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 8m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. 10m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 12m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 15m</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="14">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="14">
+                            <span class="font-semibold text-green-600">Correct Answer: B. 10m</span><br>
+                            <p class="mt-2">Final position: 10m East of start. Distance = 10m</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 15 -->
-        <div id="mcq15" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">15. If South-East becomes North and North-East becomes West, then what will South become?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. North-East</div>
-                <div class="mcq-option">B. North-West</div>
-                <div class="mcq-option">C. South-West</div>
-                <div class="mcq-option">D. East</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="15">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="15">
-                <span class="font-semibold text-green-600">Correct Answer: A. North-East</span><br>
-                <p class="mt-2">The directions are rotated 135° clockwise. South becomes North-East</p>
-            </div>
-        </div>
+                    <div id="mcq15" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">15. If South-East becomes North and North-East becomes West, then what will South become?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. North-East</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. North-West</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. South-West</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. East</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="15">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="15">
+                            <span class="font-semibold text-green-600">Correct Answer: A. North-East</span><br>
+                            <p class="mt-2">The directions are rotated 135° clockwise. South becomes North-East</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 16 -->
-        <div id="mcq16" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">16. A can do a piece of work in 10 days, B can do it in 15 days. They work together for 4 days, then A leaves. In how many more days will B finish the remaining work?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 3 days</div>
-                <div class="mcq-option" data-correct="true">B. 4 days</div>
-                <div class="mcq-option">C. 5 days</div>
-                <div class="mcq-option">D. 6 days</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="16">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="16">
-                <span class="font-semibold text-green-600">Correct Answer: B. 4 days</span><br>
-                <p class="mt-2">A's rate = 1/10, B's rate = 1/15. Combined rate = 1/10 + 1/15 = 1/6. Work done in 4 days = 4/6 = 2/3. Remaining work = 1/3. Time for B to finish = (1/3)/(1/15) = 5 days</p>
-            </div>
-        </div>
+                    <div id="mcq16" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">16. A can do a piece of work in 10 days, B can do it in 15 days. They work together for 4 days, then A leaves. In how many more days will B finish the remaining work?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 3 days</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. 4 days</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 5 days</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 6 days</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="16">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="16">
+                            <span class="font-semibold text-green-600">Correct Answer: B. 4 days</span><br>
+                            <p class="mt-2">A's rate = 1/10, B's rate = 1/15. Combined rate = 1/10 + 1/15 = 1/6. Work done in 4 days = 4/6 = 2/3. Remaining work = 1/3. Time for B to finish = (1/3)/(1/15) = 5 days</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 17 -->
-        <div id="mcq17" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">17. Two pipes A and B can fill a tank in 12 hours and 18 hours respectively. Pipe C can empty the tank in 24 hours. If all three pipes are opened together, in how many hours will the tank be filled?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 8 hours</div>
-                <div class="mcq-option" data-correct="true">B. 9 hours</div>
-                <div class="mcq-option">C. 10 hours</div>
-                <div class="mcq-option">D. 12 hours</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="17">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="17">
-                <span class="font-semibold text-green-600">Correct Answer: B. 9 hours</span><br>
-                <p class="mt-2">A's rate = 1/12, B's rate = 1/18, C's rate = -1/24. Net rate = 1/12 + 1/18 - 1/24 = 6/72 + 4/72 - 3/72 = 7/72 = 1/9. Time = 9 hours</p>
-            </div>
-        </div>
+                    <div id="mcq17" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">17. Two pipes A and B can fill a tank in 12 hours and 18 hours respectively. Pipe C can empty the tank in 24 hours. If all three pipes are opened together, in how many hours will the tank be filled?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 8 hours</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. 9 hours</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 10 hours</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 12 hours</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="17">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="17">
+                            <span class="font-semibold text-green-600">Correct Answer: B. 9 hours</span><br>
+                            <p class="mt-2">A's rate = 1/12, B's rate = 1/18, C's rate = -1/24. Net rate = 1/12 + 1/18 - 1/24 = 6/72 + 4/72 - 3/72 = 7/72 = 1/9. Time = 9 hours</p>
+                        </div>
+                    </div>
 
-        <!-- MCQ 18 -->
-        <div id="mcq18" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">18. A car travels from A to B at 60 km/hr and returns from B to A at 40 km/hr. What is the average speed for the entire journey?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option" data-correct="true">A. 48 km/hr</div>
-                <div class="mcq-option">B. 50 km/hr</div>
-                <div class="mcq-option">C. 52 km/hr</div>
-                <div class="mcq-option">D. 55 km/hr</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="18">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="18">
-                <span class="font-semibold text-green-600">Correct Answer: A. 48 km/hr</span><br>
-                <p class="mt-2">For equal distances, average speed = 2xy/(x+y) = 2×60×40/(60+40) = 4800/100 = 48 km/hr</p>
-            </div>
-        </div>
+                    <div id="mcq18" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">18. A car travels from A to B at 60 km/hr and returns from B to A at 40 km/hr. What is the average speed for the entire journey?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">A. 48 km/hr</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 50 km/hr</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 52 km/hr</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 55 km/hr</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="18">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="18">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 48 km/hr</span><br>
+                            <p class="mt-2">For equal distances, average speed = 2xy/(x+y) = 2×60×40/(60+40) = 4800/100 = 48 km/hr</p>
+                        </div>
+                    </div>
 
-        <div id="mcq19" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">19. A train 200m long running at 72 km/hr crosses a bridge in 30 seconds. What is the length of the bridge?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 300m</div>
-                <div class="mcq-option" data-correct="true">B. 400m</div>
-                <div class="mcq-option">C. 500m</div>
-                <div class="mcq-option">D. 600m</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="19">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="19">
-                <span class="font-semibold text-green-600">Correct Answer: B. 400m</span><br>
-                <p class="mt-2">Speed = 72 km/hr = 20 m/s. Distance covered = 20 × 30 = 600m. Bridge length = 600 - 200 = 400m</p>
-            </div>
-        </div>
+                    <div id="mcq19" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">19. A train 200m long running at 72 km/hr crosses a bridge in 30 seconds. What is the length of the bridge?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 300m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. 400m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 500m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 600m</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="19">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="19">
+                            <span class="font-semibold text-green-600">Correct Answer: B. 400m</span><br>
+                            <p class="mt-2">Speed = 72 km/hr = 20 m/s. Distance covered = 20 × 30 = 600m. Bridge length = 600 - 200 = 400m</p>
+                        </div>
+                    </div>
 
-        <div id="mcq20" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">20. Statements: All books are pages. Some pages are words. Conclusions: I. Some books are words. II. All words are pages.</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. Only conclusion I follows</div>
-                <div class="mcq-option">B. Only conclusion II follows</div>
-                <div class="mcq-option">C. Both conclusions follow</div>
-                <div class="mcq-option" data-correct="true">D. Neither conclusion follows</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="20">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="20">
-                <span class="font-semibold text-green-600">Correct Answer: D. Neither conclusion follows</span><br>
-                <p class="mt-2">From "All books are pages" and "Some pages are words", we cannot conclude that some books are words or all words are pages. The relationship is not definitive.</p>
-            </div>
-        </div>
+                    <div id="mcq20" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">20. Statements: All books are pages. Some pages are words. Conclusions: I. Some books are words. II. All words are pages.</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. Only conclusion I follows</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. Only conclusion II follows</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. Both conclusions follow</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">D. Neither conclusion follows</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="20">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="20">
+                            <span class="font-semibold text-green-600">Correct Answer: D. Neither conclusion follows</span><br>
+                            <p class="mt-2">From "All books are pages" and "Some pages are words", we cannot conclude that some books are words or all words are pages. The relationship is not definitive.</p>
+                        </div>
+                    </div>
 
-        <div id="mcq21" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">21. Statements: No cats are dogs. All dogs are animals. Conclusions: I. No cats are animals. II. Some animals are not cats.</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. Only conclusion I follows</div>
-                <div class="mcq-option" data-correct="true">B. Only conclusion II follows</div>
-                <div class="mcq-option">C. Both conclusions follow</div>
-                <div class="mcq-option">D. Neither conclusion follows</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="21">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="21">
-                <span class="font-semibold text-green-600">Correct Answer: B. Only conclusion II follows</span><br>
-                <p class="mt-2">Since all dogs are animals and no cats are dogs, some animals (dogs) are definitely not cats. However, we cannot conclude that no cats are animals.</p>
-            </div>
-        </div>
+                    <div id="mcq21" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">21. Statements: No cats are dogs. All dogs are animals. Conclusions: I. No cats are animals. II. Some animals are not cats.</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. Only conclusion I follows</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. Only conclusion II follows</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. Both conclusions follow</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. Neither conclusion follows</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="21">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="21">
+                            <span class="font-semibold text-green-600">Correct Answer: B. Only conclusion II follows</span><br>
+                            <p class="mt-2">Since all dogs are animals and no cats are dogs, some animals (dogs) are definitely not cats. However, we cannot conclude that no cats are animals.</p>
+                        </div>
+                    </div>
 
-        <div id="mcq22" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">22. The perimeter of a square is 48 cm. What is the area of the square?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 120 sq.cm</div>
-                <div class="mcq-option">B. 132 sq.cm</div>
-                <div class="mcq-option" data-correct="true">C. 144 sq.cm</div>
-                <div class="mcq-option">D. 156 sq.cm</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="22">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="22">
-                <span class="font-semibold text-green-600">Correct Answer: C. 144 sq.cm</span><br>
-                <p class="mt-2">Side of square = 48/4 = 12 cm. Area = 12² = 144 sq.cm</p>
-            </div>
-        </div>
+                    <div id="mcq22" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">22. The perimeter of a square is 48 cm. What is the area of the square?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 120 sq.cm</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 132 sq.cm</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">C. 144 sq.cm</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 156 sq.cm</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="22">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="22">
+                            <span class="font-semibold text-green-600">Correct Answer: C. 144 sq.cm</span><br>
+                            <p class="mt-2">Side of square = 48/4 = 12 cm. Area = 12² = 144 sq.cm</p>
+                        </div>
+                    </div>
 
-        <div id="mcq23" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">23. A right triangle has legs of 9 cm and 12 cm. What is the length of the hypotenuse?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 13 cm</div>
-                <div class="mcq-option" data-correct="true">B. 15 cm</div>
-                <div class="mcq-option">C. 17 cm</div>
-                <div class="mcq-option">D. 21 cm</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="23">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="23">
-                <span class="font-semibold text-green-600">Correct Answer: B. 15 cm</span><br>
-                <p class="mt-2">Using Pythagoras theorem: c² = 9² + 12² = 81 + 144 = 225. c = √225 = 15 cm</p>
-            </div>
-        </div>
+                    <div id="mcq23" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">23. A right triangle has legs of 9 cm and 12 cm. What is the length of the hypotenuse?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 13 cm</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. 15 cm</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 17 cm</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 21 cm</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="23">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="23">
+                            <span class="font-semibold text-green-600">Correct Answer: B. 15 cm</span><br>
+                            <p class="mt-2">Using Pythagoras theorem: c² = 9² + 12² = 81 + 144 = 225. c = √225 = 15 cm</p>
+                        </div>
+                    </div>
 
-        <div id="mcq24" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">24. The angle of elevation of the top of a tower from a point 100m away from its base is 45°. What is the height of the tower?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 50 m</div>
-                <div class="mcq-option">B. 75 m</div>
-                <div class="mcq-option" data-correct="true">C. 100 m</div>
-                <div class="mcq-option">D. 150 m</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="24">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="24">
-                <span class="font-semibold text-green-600">Correct Answer: C. 100 m</span><br>
-                <p class="mt-2">tan 45° = height/100. Since tan 45° = 1, height = 100 × 1 = 100 m</p>
-            </div>
-        </div>
+                    <div id="mcq24" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">24. The angle of elevation of the top of a tower from a point 100m away from its base is 45°. What is the height of the tower?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 50 m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 75 m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">C. 100 m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 150 m</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="24">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="24">
+                            <span class="font-semibold text-green-600">Correct Answer: C. 100 m</span><br>
+                            <p class="mt-2">tan 45° = height/100. Since tan 45° = 1, height = 100 × 1 = 100 m</p>
+                        </div>
+                    </div>
 
-        <div id="mcq25" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">25. A man is standing on the top of a 40m high building. The angle of depression to a car on the road is 30°. How far is the car from the base of the building?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 40 m</div>
-                <div class="mcq-option">B. 60 m</div>
-                <div class="mcq-option" data-correct="true">C. 40√3 m</div>
-                <div class="mcq-option">D. 80 m</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="25">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="25">
-                <span class="font-semibold text-green-600">Correct Answer: C. 40√3 m</span><br>
-                <p class="mt-2">tan 30° = 40/distance. Distance = 40/tan 30° = 40/(1/√3) = 40√3 m</p>
-            </div>
-        </div>
+                    <div id="mcq25" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">25. A man is standing on the top of a 40m high building. The angle of depression to a car on the road is 30°. How far is the car from the base of the building?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 40 m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 60 m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">C. 40√3 m</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 80 m</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="25">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="25">
+                            <span class="font-semibold text-green-600">Correct Answer: C. 40√3 m</span><br>
+                            <p class="mt-2">tan 30° = 40/distance. Distance = 40/tan 30° = 40/(1/√3) = 40√3 m</p>
+                        </div>
+                    </div>
 
-        <div id="mcq26" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">26. In a company, 40% employees are engineers, 30% are managers, and the rest are clerks. If there are 60 clerks, what is the total number of employees?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 150</div>
-                <div class="mcq-option" data-correct="true">B. 200</div>
-                <div class="mcq-option">C. 250</div>
-                <div class="mcq-option">D. 300</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="26">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="26">
-                <span class="font-semibold text-green-600">Correct Answer: B. 200</span><br>
-                <p class="mt-2">Clerks = 100% - 40% - 30% = 30%. If 30% = 60 clerks, then 100% = 60 × 100/30 = 200 employees</p>
-            </div>
-        </div>
+                    <div id="mcq26" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">26. In a company, 40% employees are engineers, 30% are managers, and the rest are clerks. If there are 60 clerks, what is the total number of employees?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 150</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. 200</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. 250</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 300</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="26">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="26">
+                            <span class="font-semibold text-green-600">Correct Answer: B. 200</span><br>
+                            <p class="mt-2">Clerks = 100% - 40% - 30% = 30%. If 30% = 60 clerks, then 100% = 60 × 100/30 = 200 employees</p>
+                        </div>
+                    </div>
 
-        <div id="mcq27" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">27. The bar chart shows sales data for 4 quarters. Q1: 20, Q2: 35, Q3: 45, Q4: 40. What is the percentage increase from Q1 to Q3?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 100%</div>
-                <div class="mcq-option">B. 115%</div>
-                <div class="mcq-option" data-correct="true">C. 125%</div>
-                <div class="mcq-option">D. 150%</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="27">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="27">
-                <span class="font-semibold text-green-600">Correct Answer: C. 125%</span><br>
-                <p class="mt-2">Percentage increase = ((45-20)/20) × 100 = (25/20) × 100 = 125%</p>
-            </div>
-        </div>
+                    <div id="mcq27" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">27. The bar chart shows sales data for 4 quarters. Q1: 20, Q2: 35, Q3: 45, Q4: 40. What is the percentage increase from Q1 to Q3?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 100%</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 115%</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">C. 125%</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 150%</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="27">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="27">
+                            <span class="font-semibold text-green-600">Correct Answer: C. 125%</span><br>
+                            <p class="mt-2">Percentage increase = ((45-20)/20) × 100 = (25/20) × 100 = 125%</p>
+                        </div>
+                    </div>
 
-        <div id="mcq28" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">28. A pie chart shows budget allocation: Education 30%, Health 25%, Infrastructure 20%, Others 25%. If the total budget is Rs. 800 crores, how much is allocated to Health and Infrastructure combined?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. Rs. 300 crores</div>
-                <div class="mcq-option">B. Rs. 320 crores</div>
-                <div class="mcq-option">C. Rs. 340 crores</div>
-                <div class="mcq-option" data-correct="true">D. Rs. 360 crores</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="28">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="28">
-                <span class="font-semibold text-green-600">Correct Answer: D. Rs. 360 crores</span><br>
-                <p class="mt-2">Health + Infrastructure = 25% + 20% = 45%. Amount = 45% of 800 = 360 crores</p>
-            </div>
-        </div>
+                    <div id="mcq28" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">28. A pie chart shows budget allocation: Education 30%, Health 25%, Infrastructure 20%, Others 25%. If the total budget is Rs. 800 crores, how much is allocated to Health and Infrastructure combined?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. Rs. 300 crores</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. Rs. 320 crores</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. Rs. 340 crores</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">D. Rs. 360 crores</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="28">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="28">
+                            <span class="font-semibold text-green-600">Correct Answer: D. Rs. 360 crores</span><br>
+                            <p class="mt-2">Health + Infrastructure = 25% + 20% = 45%. Amount = 45% of 800 = 360 crores</p>
+                        </div>
+                    </div>
 
-        <div id="mcq29" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">29. The ratio of boys to girls in a class is 3:2. If there are 15 boys, how many girls are there?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. 8</div>
-                <div class="mcq-option">B. 9</div>
-                <div class="mcq-option" data-correct="true">C. 10</div>
-                <div class="mcq-option">D. 12</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="29">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="29">
-                <span class="font-semibold text-green-600">Correct Answer: C. 10</span><br>
-                <p class="mt-2">If boys:girls = 3:2 and boys = 15, then 3x = 15, so x = 5. Girls = 2x = 2 × 5 = 10</p>
-            </div>
-        </div>
+                    <div id="mcq29" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">29. The ratio of boys to girls in a class is 3:2. If there are 15 boys, how many girls are there?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. 8</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">B. 9</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">C. 10</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. 12</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="29">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="29">
+                            <span class="font-semibold text-green-600">Correct Answer: C. 10</span><br>
+                            <p class="mt-2">If boys:girls = 3:2 and boys = 15, then 3x = 15, so x = 5. Girls = 2x = 2 × 5 = 10</p>
+                        </div>
+                    </div>
 
-        <div id="mcq30" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
-            <p class="mb-4 text-xl font-medium text-gray-800">30. If West becomes North-East and North becomes South-East, then what will North-West become?</p>
-            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
-                <div class="mcq-option">A. South</div>
-                <div class="mcq-option" data-correct="true">B. East</div>
-                <div class="mcq-option">C. South-West</div>
-                <div class="mcq-option">D. North-East</div>
-            </div>
-            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="30">
-                View Answer
-            </button>
-            <div class="hidden mcq-answer-text" data-mcq-answer="30">
-                <span class="font-semibold text-green-600">Correct Answer: B. East</span><br>
-                <p class="mt-2">The directions are rotated 135° clockwise. North-West becomes East after this rotation.</p>
-            </div>
-        </div>
+                    <div id="mcq30" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">30. If West becomes North-East and North becomes South-East, then what will North-West become?</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">A. South</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100" data-correct="true">B. East</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">C. South-West</div>
+                            <div class="p-2 rounded-md cursor-pointer mcq-option hover:bg-gray-100">D. North-East</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="30">
+                            View Answer
+                        </button>
+                        <div class="hidden mt-4 mcq-answer-text" data-mcq-answer="30">
+                            <span class="font-semibold text-green-600">Correct Answer: B. East</span><br>
+                            <p class="mt-2">The directions are rotated 135° clockwise. North-West becomes East after this rotation.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-          const mobileMenuButton = document.getElementById('mobile-menu-button');
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const closeMobileMenu = document.getElementById('close-mobile-menu');
         const mobileOverlay = document.getElementById('mobile-overlay');
-        const mobileTopicsToggle = document.getElementById('mobile-topics-toggle');
-        const mobileTopicsContent = document.getElementById('mobile-topics-content');
-        const mobileTopicsArrow = document.getElementById('mobile-topics-arrow');
 
         function openMobileMenu() {
             mobileMenu.classList.add('open');
@@ -687,49 +649,34 @@
         closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
         mobileOverlay.addEventListener('click', closeMobileMenuFunc);
 
-        // Mobile topics accordion
-        mobileTopicsToggle.addEventListener('click', () => {
-            const isHidden = mobileTopicsContent.classList.contains('hidden');
-            if (isHidden) {
-                mobileTopicsContent.classList.remove('hidden');
-                mobileTopicsArrow.style.transform = 'rotate(180deg)';
-            } else {
-                mobileTopicsContent.classList.add('hidden');
-                mobileTopicsArrow.style.transform = 'rotate(0deg)';
-            }
-        });
-
         // Close mobile menu on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeMobileMenuFunc();
             }
         });
-        document.addEventListener("click", function(e) {
+
+        // MCQ answer toggle and option selection
+        document.addEventListener('click', (e) => {
             // Handle answer button clicks
-            if (e.target.classList.contains("mcq-answer-btn")) {
-                const mcqId = e.target.getAttribute("data-mcq");
+            if (e.target.classList.contains('mcq-answer-btn')) {
+                const mcqId = e.target.getAttribute('data-mcq');
                 const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
-                answer.classList.toggle("hidden");
-                
-                // Toggle button text
-                if (answer.classList.contains("hidden")) {
-                    e.target.textContent = "View Answer";
-                } else {
-                    e.target.textContent = "Hide Answer";
+                if (answer) {
+                    answer.classList.toggle('hidden');
+                    e.target.textContent = answer.classList.contains('hidden') ? 'View Answer' : 'Hide Answer';
                 }
             }
-            
+
             // Handle MCQ option selection
-            if (e.target.classList.contains("mcq-option")) {
-                const options = e.target.parentElement.querySelectorAll(".mcq-option");
+            if (e.target.classList.contains('mcq-option')) {
+                const options = e.target.parentElement.querySelectorAll('.mcq-option');
                 options.forEach(opt => {
-                    opt.classList.remove("bg-green-100", "border-green-400", "bg-red-100", "border-red-400", "text-green-700", "text-red-700");
-                    
-                    if (opt.hasAttribute("data-correct")) {
-                        opt.classList.add("bg-green-100", "border-green-400", "text-green-700");
+                    opt.classList.remove('bg-green-100', 'border-green-400', 'text-green-700', 'bg-red-100', 'border-red-400', 'text-red-700');
+                    if (opt.hasAttribute('data-correct')) {
+                        opt.classList.add('bg-green-100', 'border', 'border-green-400', 'text-green-700');
                     } else if (opt === e.target) {
-                        opt.classList.add("bg-red-100", "border-red-400", "text-red-700");
+                        opt.classList.add('bg-red-100', 'border', 'border-red-400', 'text-red-700');
                     }
                 });
             }
