@@ -1,0 +1,291 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System - Practice MCQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for MCQ interactions */
+        .mcq-option {
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+        
+        .mcq-option:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+        
+        .mcq-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+            font-weight: 600;
+        }
+        
+        .mcq-option.incorrect {
+            background-color: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .mcq-answer-text {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PDF optimization */
+        @media print {
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+            }
+            
+            .mcq-option {
+                break-inside: avoid;
+            }
+            
+            .border {
+                border: 1px solid #d1d5db !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <div class="container px-4 py-8 mx-auto">
+
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2 text-sm text-gray-600">
+                        <span>Progress</span>
+                        <span id="progress-text">0/15 completed</span>
+                    </div>
+                    <div class="w-full h-2 bg-gray-200 rounded-full">
+                        <div id="progress-bar" class="h-2 transition-all duration-300 bg-blue-600 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+<div id="mcq1" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">1. The angle of elevation of the top of a tower from a point 20m away from its base is 45°. What is the height of the tower?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option" data-correct="true">A. 20m</div>
+        <div class="mcq-option">B. 40m</div>
+        <div class="mcq-option">C. 20√2m</div>
+        <div class="mcq-option">D. 40√2m</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="1">
+        <span class="font-semibold text-green-600">Correct Answer: A. 20m</span><br>
+        <p class="mt-2">Using tan(45°) = height / distance ⇒ height = 20m.</p>
+    </div>
+</div>
+
+<div id="mcq2" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">2. If the angle of elevation of the sun is 60°, the length of the shadow of a 12m-high tree is:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 6√3m</div>
+        <div class="mcq-option" data-correct="true">B. 4√3m</div>
+        <div class="mcq-option">C. 12√3m</div>
+        <div class="mcq-option">D. 8√3m</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="2">
+        <span class="font-semibold text-green-600">Correct Answer: B. 4√3m</span><br>
+        <p class="mt-2">tan(60°) = height / shadow ⇒ √3 = 12 / shadow ⇒ shadow = 12/√3 = 4√3m.</p>
+    </div>
+</div>
+
+<div id="mcq3" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">3. From the top of a 90m-high building, the angle of depression of a car is 30°. How far is the car from the building?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 30√3m</div>
+        <div class="mcq-option">B. 90√3m</div>
+        <div class="mcq-option" data-correct="true">C. 90√3m</div>
+        <div class="mcq-option">D. 60√3m</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="3">
+        <span class="font-semibold text-green-600">Correct Answer: C. 90√3m</span><br>
+        <p class="mt-2">tan(30°) = height / distance ⇒ 1/√3 = 90 / distance ⇒ distance = 90√3m.</p>
+    </div>
+</div>
+
+<div id="mcq4" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">4. A ladder 10m long leans against a wall. If the ladder makes a 30° angle with the ground, how high does it reach the wall?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option" data-correct="true">A. 5m</div>
+        <div class="mcq-option">B. 5√3m</div>
+        <div class="mcq-option">C. 10√3m</div>
+        <div class="mcq-option">D. 10m</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="4">
+        <span class="font-semibold text-green-600">Correct Answer: A. 5m</span><br>
+        <p class="mt-2">sin(30°) = height / ladder ⇒ 1/2 = height / 10 ⇒ height = 5m.</p>
+    </div>
+</div>
+
+<div id="mcq5" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">5. The angle of elevation of a tower changes from 30° to 45° as an observer moves 20m closer. What is the height of the tower?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 10(√3 + 1)m</div>
+        <div class="mcq-option" data-correct="true">B. 10(√3 + 1)m</div>
+        <div class="mcq-option">C. 20(√3 - 1)m</div>
+        <div class="mcq-option">D. 20(√3 + 1)m</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="5">
+        <span class="font-semibold text-green-600">Correct Answer: B. 10(√3 + 1)m</span><br>
+        <p class="mt-2">Let height = h. <br> tan(30°) = h/(x + 20) ⇒ 1/√3 = h/(x + 20) <br> tan(45°) = h/x ⇒ 1 = h/x ⇒ h = x <br> Solving, h = 10(√3 + 1)m.</p>
+    </div>
+</div>
+
+
+
+                
+    </div>
+  <!-- Results Summary -->
+                <div id="results-summary" class="hidden p-6 mt-8 border rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-800">Quiz Results</h3>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600" id="correct-count">0</div>
+                            <div class="text-sm text-gray-600">Correct</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-600" id="incorrect-count">0</div>
+                            <div class="text-sm text-gray-600">Incorrect</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="score-percentage">0%</div>
+                            <div class="text-sm text-gray-600">Score</div>
+                        </div>
+                    </div>
+                </div>
+          
+    </div>
+
+    <script>
+        let answeredQuestions = new Set();
+        let correctAnswers = 0;
+        let totalQuestions = 15;
+
+        function updateProgress() {
+            const progressPercentage = (answeredQuestions.size / totalQuestions) * 100;
+            document.getElementById('progress-bar').style.width = progressPercentage + '%';
+            document.getElementById('progress-text').textContent = `${answeredQuestions.size}/${totalQuestions} completed`;
+            
+            if (answeredQuestions.size === totalQuestions) {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results-summary');
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('fade-in');
+            
+            const incorrectAnswers = answeredQuestions.size - correctAnswers;
+            const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('incorrect-count').textContent = incorrectAnswers;
+            document.getElementById('score-percentage').textContent = scorePercentage + '%';
+            
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("click", function(e) {
+            // Handle answer button clicks
+            if (e.target.classList.contains("mcq-answer-btn")) {
+                const mcqId = e.target.getAttribute("data-mcq");
+                const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
+                answer.classList.toggle("hidden");
+                
+                // Toggle button text
+                if (answer.classList.contains("hidden")) {
+                    e.target.textContent = "View Answer";
+                } else {
+                    e.target.textContent = "Hide Answer";
+                    answer.classList.add('fade-in');
+                }
+            }
+            
+            // Handle MCQ option selection
+            if (e.target.classList.contains("mcq-option")) {
+                const mcqContainer = e.target.closest('[id^="mcq"]');
+                const mcqId = mcqContainer.id.replace('mcq', '');
+                const options = e.target.parentElement.querySelectorAll(".mcq-option");
+                
+                // Clear previous selections
+                options.forEach(opt => {
+                    opt.classList.remove("correct", "incorrect");
+                });
+                
+                // Mark all correct answers and the selected answer
+                let isCorrect = false;
+                options.forEach(opt => {
+                    if (opt.hasAttribute("data-correct")) {
+                        opt.classList.add("correct");
+                        if (opt === e.target) {
+                            isCorrect = true;
+                        }
+                    } else if (opt === e.target) {
+                        opt.classList.add("incorrect");
+                    }
+                });
+                
+                // Update progress if this question hasn't been answered before
+                if (!answeredQuestions.has(mcqId)) {
+                    answeredQuestions.add(mcqId);
+                    if (isCorrect) {
+                        correctAnswers++;
+                    }
+                    updateProgress();
+                }
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                html {
+                    scroll-behavior: smooth;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

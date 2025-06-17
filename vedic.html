@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedic Mathematics - Practice MCQs</title>
+    <script src="https://cdn.tailwindcss.com/3.3.5"></script>
+    <style>
+
+        .mcq-option {
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+        
+        .mcq-option:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+        
+        .mcq-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+            font-weight: 600;
+        }
+        
+        .mcq-option.incorrect {
+            background-color: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .mcq-answer-text {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+   
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2 text-sm text-gray-600">
+                        <span>Progress</span>
+                        <span id="progress-text">0/15 completed</span>
+                    </div>
+                    <div class="w-full h-2 bg-gray-200 rounded-full">
+                        <div id="progress-bar" class="h-2 transition-all duration-300 bg-blue-600 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- MCQ 1 -->
+                    <div id="mcq1" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">1. Calculate 23 × 27</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 621</div>
+                            <div class="mcq-option">B. 631</div>
+                            <div class="mcq-option">C. 641</div>
+                            <div class="mcq-option">D. 651</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="1">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 621</span><br>
+                            <p class="mt-2">Using (25-2)(25+2) = 25² - 4 = 625 - 4 = 621</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 2 -->
+                    <div id="mcq2" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">2. Find 34²</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 1156</div>
+                            <div class="mcq-option">B. 1166</div>
+                            <div class="mcq-option">C. 1176</div>
+                            <div class="mcq-option">D. 1186</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="2">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 1156</span><br>
+                            <p class="mt-2">Using (30+4)² = 30² + 2×30×4 + 4² = 900 + 240 + 16 = 1156</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 3 -->
+                    <div id="mcq3" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">3. Calculate 67 × 63</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 4221</div>
+                            <div class="mcq-option">B. 4231</div>
+                            <div class="mcq-option">C. 4241</div>
+                            <div class="mcq-option">D. 4251</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="3">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 4221</span><br>
+                            <p class="mt-2">Using (65+2)(65-2) = 65² - 4 = 4225 - 4 = 4221</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 4 -->
+                    <div id="mcq4" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">4. Find 998 × 1002</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 999996</div>
+                            <div class="mcq-option">B. 999986</div>
+                            <div class="mcq-option">C. 999976</div>
+                            <div class="mcq-option">D. 999966</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="4">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 999996</span><br>
+                            <p class="mt-2">Using (1000-2)(1000+2) = 1000² - 4 = 1000000 - 4 = 999996</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 5 -->
+                    <div id="mcq5" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">5. Calculate 78²</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 6084</div>
+                            <div class="mcq-option">B. 6094</div>
+                            <div class="mcq-option">C. 6104</div>
+                            <div class="mcq-option">D. 6114</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="5">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 6084</span><br>
+                            <p class="mt-2">Using (80-2)² = 80² - 2×80×2 + 4 = 6400 - 320 + 4 = 6084</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 6 -->
+                    <div id="mcq6" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">6. Find 45 × 15</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 675</div>
+                            <div class="mcq-option">B. 685</div>
+                            <div class="mcq-option">C. 695</div>
+                            <div class="mcq-option">D. 705</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="6">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="6">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 675</span><br>
+                            <p class="mt-2">Using 45 × 15 = 45 × (10 + 5) = 450 + 225 = 675</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 7 -->
+                    <div id="mcq7" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">7. Calculate 104 × 106</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 11024</div>
+                            <div class="mcq-option">B. 11034</div>
+                            <div class="mcq-option">C. 11044</div>
+                            <div class="mcq-option">D. 11054</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="7">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="7">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 11024</span><br>
+                            <p class="mt-2">Using (105-1)(105+1) = 105² - 1 = 11025 - 1 = 11024</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 8 -->
+                    <div id="mcq8" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">8. Find the square of 35</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 1225</div>
+                            <div class="mcq-option">B. 1235</div>
+                            <div class="mcq-option">C. 1245</div>
+                            <div class="mcq-option">D. 1255</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="8">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="8">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 1225</span><br>
+                            <p class="mt-2">Using 35² = (30+5)² = 30² + 2×30×5 + 5² = 900 + 300 + 25 = 1225</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 9 -->
+                    <div id="mcq9" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">9. Calculate 97 × 103</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 9991</div>
+                            <div class="mcq-option">B. 9981</div>
+                            <div class="mcq-option">C. 9971</div>
+                            <div class="mcq-option">D. 9961</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="9">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="9">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 9991</span><br>
+                            <p class="mt-2">Using (100-3)(100+3) = 100² - 9 = 10000 - 9 = 9991</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 10 -->
+                    <div id="mcq10" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">10. Find 52 × 48</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 2496</div>
+                            <div class="mcq-option">B. 2506</div>
+                            <div class="mcq-option">C. 2516</div>
+                            <div class="mcq-option">D. 2526</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="10">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="10">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 2496</span><br>
+                            <p class="mt-2">Using (50+2)(50-2) = 50² - 4 = 2500 - 4 = 2496</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 11 -->
+                    <div id="mcq11" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">11. Calculate the square of 65</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 4225</div>
+                            <div class="mcq-option">B. 4235</div>
+                            <div class="mcq-option">C. 4245</div>
+                            <div class="mcq-option">D. 4255</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="11">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="11">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 4225</span><br>
+                            <p class="mt-2">Using 65² = (60+5)² = 60² + 2×60×5 + 5² = 3600 + 600 + 25 = 4225</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 12 -->
+                    <div id="mcq12" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">12. Find 111 × 111</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 12321</div>
+                            <div class="mcq-option">B. 12331</div>
+                            <div class="mcq-option">C. 12341</div>
+                            <div class="mcq-option">D. 12351</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="12">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="12">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 12321</span><br>
+                            <p class="mt-2">Using 111² = (100+11)² = 100² + 2×100×11 + 11² = 10000 + 2200 + 121 = 12321</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 13 -->
+                    <div id="mcq13" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">13. Calculate 84 × 86</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 7224</div>
+                            <div class="mcq-option">B. 7234</div>
+                            <div class="mcq-option">C. 7244</div>
+                            <div class="mcq-option">D. 7254</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="13">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="13">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 7224</span><br>
+                            <p class="mt-2">Using (85-1)(85+1) = 85² - 1 = 7225 - 1 = 7224</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 14 -->
+                    <div id="mcq14" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">14. Find 99²</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 9801</div>
+                            <div class="mcq-option">B. 9811</div>
+                            <div class="mcq-option">C. 9821</div>
+                            <div class="mcq-option">D. 9831</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="14">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="14">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 9801</span><br>
+                            <p class="mt-2">Using 99² = (100-1)² = 100² - 2×100×1 + 1 = 10000 - 200 + 1 = 9801</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQ 15 -->
+                    <div id="mcq15" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                        <p class="mb-4 text-xl font-medium text-gray-800">15. Calculate 76 × 24</p>
+                        <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                            <div class="mcq-option" data-correct="true">A. 1824</div>
+                            <div class="mcq-option">B. 1834</div>
+                            <div class="mcq-option">C. 1844</div>
+                            <div class="mcq-option">D. 1854</div>
+                        </div>
+                        <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="15">
+                            View Answer
+                        </button>
+                        <div class="hidden mcq-answer-text" data-mcq-answer="15">
+                            <span class="font-semibold text-green-600">Correct Answer: A. 1824</span><br>
+                            <p class="mt-2">Using 76 × 24 = 76 × (20 + 4) = 1520 + 304 = 1824</p>
+                        </div>
+               
+
+                <!-- Results Summary -->
+                <div id="results-summary" class="hidden p-6 mt-8 border rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-800">Quiz Results</h3>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600" id="correct-count">0</div>
+                            <div class="text-sm text-gray-600">Correct</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-600" id="incorrect-count">0</div>
+                            <div class="text-sm text-gray-600">Incorrect</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="score-percentage">0%</div>
+                            <div class="text-sm text-gray-600">Score</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+    </div>
+
+    <script>
+        let answeredQuestions = new Set();
+        let correctAnswers = 0;
+        let totalQuestions = 15;
+
+        function updateProgress() {
+            const progressPercentage = (answeredQuestions.size / totalQuestions) * 100;
+            document.getElementById('progress-bar').style.width = progressPercentage + '%';
+            document.getElementById('progress-text').textContent = `${answeredQuestions.size}/${totalQuestions} completed`;
+            
+            if (answeredQuestions.size === totalQuestions) {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results-summary');
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('fade-in');
+            
+            const incorrectAnswers = answeredQuestions.size - correctAnswers;
+            const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('incorrect-count').textContent = incorrectAnswers;
+            document.getElementById('score-percentage').textContent = scorePercentage + '%';
+            
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("click", function(e) {
+            // Handle answer button clicks
+            if (e.target.classList.contains("mcq-answer-btn")) {
+                const mcqId = e.target.getAttribute("data-mcq");
+                const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
+                answer.classList.toggle("hidden");
+                
+                // Toggle button text
+                if (answer.classList.contains("hidden")) {
+                    e.target.textContent = "View Answer";
+                } else {
+                    e.target.textContent = "Hide Answer";
+                    answer.classList.add('fade-in');
+                }
+            }
+            
+            // Handle MCQ option selection
+            if (e.target.classList.contains("mcq-option")) {
+                const mcqContainer = e.target.closest('[id^="mcq"]');
+                const mcqId = mcqContainer.id.replace('mcq', '');
+                const options = e.target.parentElement.querySelectorAll(".mcq-option");
+                
+                // Clear previous selections
+                options.forEach(opt => {
+                    opt.classList.remove("correct", "incorrect");
+                });
+                
+                // Mark all correct answers and the selected answer
+                let isCorrect = false;
+                options.forEach(opt => {
+                    if (opt.hasAttribute("data-correct")) {
+                        opt.classList.add("correct");
+                        if (opt === e.target) {
+                            isCorrect = true;
+                        }
+                    } else if (opt === e.target) {
+                        opt.classList.add("incorrect");
+                    }
+                });
+                
+                // Update progress if this question hasn't been answered before
+                if (!answeredQuestions.has(mcqId)) {
+                    answeredQuestions.add(mcqId);
+                    if (isCorrect) {
+                        correctAnswers++;
+                    }
+                    updateProgress();
+                }
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                html {
+                    scroll-behavior: smooth;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

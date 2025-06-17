@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytical Skills - Master Your Problem-Solving Abilities</title>
+    <script src="https://cdn.tailwindcss.com/3.3.5"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .btn-primary {
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease;
+            background: linear-gradient(to right, #2563eb, #1d4ed8);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        } 
+        .btn-primary:hover {
+            background: linear-gradient(to right, #1d4ed8, #1e40af);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+        .btn-secondary {
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            color: #1d4ed8;
+            transition: all 0.3s ease;
+            background: white;
+            border: 2px solid #2563eb;
+            border-radius: 0.5rem;
+        }
+        .btn-secondary:hover {
+            background: #eff6ff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        .btn-secondary:active {
+            transform: scale(0.98);
+        }
+        .feature-card {
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .feature-card:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: translateY(-8px);
+        }
+        .topic-card {
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .topic-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        .stat-card {
+            padding: 1.5rem;
+            text-align: center;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .stat-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .floating-animation {
+            animation: floating 6s ease-in-out infinite;
+        }
+        .floating-animation:nth-child(even) {
+            animation-delay: 3s;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytical Skills - Navbar</title>
+    <script src="https://cdn.tailwindcss.com/3.3.5"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .logo-animation {
+            transition: all 0.3s ease;
+        }
+        .logo-animation:hover {
+            transform: scale(1.05);
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 border-b border-gray-200 shadow-sm navbar-blur">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center">
+                    <div class="flex items-center flex-shrink-0">
+                        <span class="text-2xl font-bold text-blue-600 cursor-pointer logo-animation">&lt;/&gt;</span>
+                        <span class="hidden ml-3 text-2xl font-semibold text-blue-600 sm:block">LeetLeap</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-baseline ml-10 space-x-4">
+                        <a href="index2.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-home"></i> Home
+                        </a>
+                       
+                        <a href="mixed.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-tasks"></i> Practice
+                        </a>
+                        <a href="workbook.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-book-open"></i> Workbooks
+                        </a>
+                        <a href="about.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-info-circle"></i> About
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="justify-center sm:flex-row">
+                <a href="index2.html" class="btn-primary">
+                    <i class="mr-2 fas fa-rocket"></i> Start Learning
+                </a>
+                
+            </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                        <i class="text-xl fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg md:hidden mobile-menu">
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-600">&lt;/&gt;</span>
+                    <span class="ml-2 text-lg font-semibold text-gray-800">Menu</span>
+                </div>
+                <button id="close-mobile-menu" class="p-1 text-gray-500 hover:text-gray-700">
+                    <i class="text-xl fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="p-4 space-y-2 bg-black">
+                <a href="index2.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-home"></i> Home
+                </a>
+                 
+                <a href="mixed.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-tasks"></i> Practice
+                </a>
+                <a href="workbook.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-book-open"></i> Workbooks
+                </a>
+                <a href="about.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-info-circle"></i> About
+                </a>
+                
+    <div class="pt-4 border-t border-gray-200">
+  <a href="index2"
+     class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
+    <i class="mr-2 fa-solid fa-play"></i> Start Learning
+  </a>
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Mobile menu overlay -->
+        <div id="mobile-overlay" class="fixed inset-0 z-40 hidden bg-black bg-opacity-50 md:hidden"></div>
+    </nav>
+
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileTopicsToggle = document.getElementById('mobile-topics-toggle');
+        const mobileTopicsContent = document.getElementById('mobile-topics-content');
+        const mobileTopicsArrow = document.getElementById('mobile-topics-arrow');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenuFunc() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+        mobileOverlay.addEventListener('click', closeMobileMenuFunc);
+
+        // Mobile topics accordion
+        mobileTopicsToggle.addEventListener('click', () => {
+            const isHidden = mobileTopicsContent.classList.contains('hidden');
+            if (isHidden) {
+                mobileTopicsContent.classList.remove('hidden');
+                mobileTopicsArrow.style.transform = 'rotate(180deg)';
+            } else {
+                mobileTopicsContent.classList.add('hidden');
+                mobileTopicsArrow.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenuFunc();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+    
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden hero-gradient">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="container relative z-10 max-w-6xl px-4 py-20 mx-auto text-center">
+            <div class="mb-8 animate-fadeInUp">
+                <h1 class="mb-6 text-5xl font-bold text-white md:text-6xl">
+                    Master Your <span class="text-yellow-300">Analytical Skills</span>
+                </h1>
+                <p class="max-w-3xl mx-auto mb-8 text-xl text-blue-100 md:text-2xl">
+                    Unlock your problem-solving potential with comprehensive practice materials, 
+                    interactive exercises, and expert guidance across 18+ analytical topics.
+                </p>
+            </div>
+            
+            <div class="flex flex-col justify-center gap-4 mb-12 sm:flex-row animate-fadeInUp">
+                <a href="index2.html" class="btn-primary">
+                    <i class="mr-2 fas fa-rocket"></i> Start Learning Now
+                </a>
+                <a href="#features" class="btn-secondary">
+                    <i class="mr-2 fas fa-info-circle"></i> Learn More
+                </a>
+            </div>
+            
+            <!-- Floating Icons -->
+            <div class="hidden md:block">
+                <div class="absolute floating-animation top-20 left-10">
+                    <i class="text-4xl text-yellow-300 fas fa-calculator opacity-70"></i>
+                </div>
+                <div class="absolute floating-animation top-32 right-16">
+                    <i class="text-4xl text-blue-300 fas fa-chart-line opacity-70"></i>
+                </div>
+                <div class="absolute floating-animation bottom-20 left-20">
+                    <i class="text-4xl text-green-300 fas fa-brain opacity-70"></i>
+                </div>
+                <div class="absolute floating-animation bottom-32 right-12">
+                    <i class="text-4xl text-purple-300 fas fa-lightbulb opacity-70"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 -mt-12">
+        <div class="container max-w-6xl px-4 mx-auto">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+                <div class="stat-card">
+                    <div class="mb-4 text-4xl font-bold text-blue-600">18+</div>
+                    <h3 class="text-lg font-semibold text-gray-800">Topics Covered</h3>
+                    <p class="text-sm text-gray-600">Comprehensive curriculum</p>
+                </div>
+                <div class="stat-card">
+                    <div class="mb-4 text-4xl font-bold text-green-600">500+</div>
+                    <h3 class="text-lg font-semibold text-gray-800">Practice Questions</h3>
+                    <p class="text-sm text-gray-600">Extensive question bank</p>
+                </div>
+                <div class="stat-card">
+                    <div class="mb-4 text-4xl font-bold text-purple-600">100%</div>
+                    <h3 class="text-lg font-semibold text-gray-800">Free Access</h3>
+                    <p class="text-sm text-gray-600">No hidden costs</p>
+                </div>
+                <div class="stat-card">
+                    <div class="mb-4 text-4xl font-bold text-orange-600">24/7</div>
+                    <h3 class="text-lg font-semibold text-gray-800">Available</h3>
+                    <p class="text-sm text-gray-600">Learn at your pace</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container max-w-6xl px-4 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-4xl font-bold text-gray-800">Why Choose Our Platform?</h2>
+                <p class="max-w-2xl mx-auto text-xl text-gray-600">
+                    We provide everything you need to excel in analytical reasoning and quantitative aptitude
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <div class="feature-card">
+                    <div class="mb-4 text-4xl text-blue-600 group-hover:text-blue-700">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="mb-3 text-xl font-semibold text-gray-800">Comprehensive Content</h3>
+                    <p class="text-gray-600">
+                        From basic concepts to advanced techniques, covering all major analytical topics 
+                        with detailed explanations and examples.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="mb-4 text-4xl text-green-600 group-hover:text-green-700">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="mb-3 text-xl font-semibold text-gray-800">Interactive Practice</h3>
+                    <p class="text-gray-600">
+                        Engage with interactive MCQs, instant feedback, and detailed solutions 
+                        to reinforce your learning.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="mb-4 text-4xl text-purple-600 group-hover:text-purple-700">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="mb-3 text-xl font-semibold text-gray-800">Progress Tracking</h3>
+                    <p class="text-gray-600">
+                        Monitor your improvement across different topics and identify areas 
+                        that need more attention.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="mb-4 text-4xl text-orange-600 group-hover:text-orange-700">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="mb-3 text-xl font-semibold text-gray-800">Expert Guidance</h3>
+                    <p class="text-gray-600">
+                        Learn from carefully curated content designed by analytical reasoning 
+                        experts and educators.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="mb-4 text-4xl text-red-600 group-hover:text-red-700">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="mb-3 text-xl font-semibold text-gray-800">Mobile Friendly</h3>
+                    <p class="text-gray-600">
+                        Access your learning materials anywhere, anytime with our responsive 
+                        design that works on all devices.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="mb-4 text-4xl text-teal-600 group-hover:text-teal-700">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="mb-3 text-xl font-semibold text-gray-800">Exam Preparation</h3>
+                    <p class="text-gray-600">
+                        Perfect for competitive exams, job interviews, and academic assessments 
+                        with realistic practice scenarios.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Preview Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container max-w-6xl px-4 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-4xl font-bold text-gray-800">Popular Topics</h2>
+                <p class="max-w-2xl mx-auto text-xl text-gray-600">
+                    Start with these highly-demanded analytical skills topics
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="topic-card" onclick="window.location.href='index2.html?topic=Vedic%20Maths'">
+                    <div class="flex items-center mb-3">
+                        <i class="mr-3 text-2xl text-blue-600 fas fa-calculator"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">Vedic Maths</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">Master ancient calculation techniques for faster problem-solving</p>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='index2.html?topic=Logical%20Reasoning'">
+                    <div class="flex items-center mb-3">
+                        <i class="mr-3 text-2xl text-green-600 fas fa-brain"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">Logical Reasoning</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">Develop critical thinking and logical problem-solving skills</p>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='index2.html?topic=Data%20Interpretation'">
+                    <div class="flex items-center mb-3">
+                        <i class="mr-3 text-2xl text-purple-600 fas fa-chart-bar"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">Data Interpretation</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">Analyze charts, graphs, and tables effectively</p>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='index2.html?topic=Percentage'">
+                    <div class="flex items-center mb-3">
+                        <i class="mr-3 text-2xl text-orange-600 fas fa-percent"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">Percentage</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">Master percentage calculations and applications</p>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='index2.html?topic=Probability'">
+                    <div class="flex items-center mb-3">
+                        <i class="mr-3 text-2xl text-red-600 fas fa-dice"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">Probability</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">Understand chance, risk, and statistical outcomes</p>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='index2.html?topic=Time%20and%20Work'">
+                    <div class="flex items-center mb-3">
+                        <i class="mr-3 text-2xl text-teal-600 fas fa-clock"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">Time and Work</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">Solve efficiency and work-rate problems</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="index2.html" class="btn-primary">
+                    <i class="mr-2 fas fa-list"></i> View All Topics
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+        <div class="container max-w-4xl px-4 mx-auto text-center">
+            <div class="mb-8">
+                <h2 class="mb-4 text-4xl font-bold text-white">Ready to Get Started?</h2>
+                <p class="text-xl text-blue-100">
+                    Join thousands of learners who have improved their analytical skills with our platform
+                </p>
+            </div>
+            
+            <div class="flex flex-col justify-center gap-4 sm:flex-row">
+                <a href="index2.html" class="px-8 py-4 text-lg font-semibold text-blue-700 transition-all duration-300 bg-white rounded-lg hover:bg-gray-100 hover:shadow-xl hover:-translate-y-1">
+                    <i class="mr-2 fas fa-play"></i> Start Learning
+                </a>
+                <a href="https://tinyurl.com/ytv47jx9" target="_blank" class="px-8 py-4 text-lg font-semibold text-white transition-all duration-300 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-blue-700 hover:shadow-xl hover:-translate-y-1">
+                    <i class="mr-2 fas fa-download"></i> Get Workbooks
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-gray-600 bg-gray-800">
+        <div class="container max-w-6xl px-4 mx-auto">
+            <div class="mb-8">
+                <h3 class="mb-4 text-2xl font-bold text-white">Analytical Skills</h3>
+                <p class="max-w-2xl mx-auto text-gray-400">
+                    Empowering learners worldwide with comprehensive analytical and quantitative reasoning skills.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8 mb-8 md:grid-cols-3">
+                <div>
+                    <h4 class="mb-4 text-lg font-semibold text-white">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index2.html" class="hover:text-white">All Topics</a></li>
+                        <li><a href="index2.html?topic=Vedic%20Maths" class="hover:text-white">Vedic Maths</a></li>
+                        <li><a href="mixed.html" class="hover:text-white">Mixed Practice</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="mb-4 text-lg font-semibold text-white">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://tinyurl.com/ytv47jx9" target="_blank" class="hover:text-white">Workbooks</a></li>
+                        <li><a href="index2.html" class="hover:text-white">Practice Tests</a></li>
+                        <li><a href="#" class="hover:text-white">Study Guides</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="mb-4 text-lg font-semibold text-white">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-700">
+                <p class="text-gray-400">© 2025 Analytical Skills Practice. All rights reserved.</p>
+                <p class="mt-2 text-sm text-gray-500">Designed for effective learning and practice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-card, .topic-card, .stat-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

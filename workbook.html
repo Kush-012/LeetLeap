@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workbooks | Analytical Skills</title>
+    <script src="https://cdn.tailwindcss.com/3.3.5"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn-primary {
+                @apply px-6 py-2 font-medium text-white transition-all duration-200 bg-blue-600 border border-blue-600 rounded-lg hover:bg-blue-700 hover:shadow-md active:scale-[0.98];
+            }
+            .btn-secondary {
+                @apply px-6 py-2 font-medium text-gray-700 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 hover:shadow-md active:scale-[0.98];
+            }
+            .card {
+                @apply p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200;
+            }
+            .workbook-card {
+                @apply p-5 transition-all duration-200 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-300;
+            }
+            .difficulty-beginner {
+                @apply text-green-600 bg-green-100;
+            }
+            .difficulty-intermediate {
+                @apply text-yellow-600 bg-yellow-100;
+            }
+            .difficulty-advanced {
+                @apply text-red-600 bg-red-100;
+            }
+        }
+         
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        } 
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .logo-animation {
+            transition: all 0.3s ease;
+        }
+        .logo-animation:hover {
+            transform: scale(1.05);
+            color: #2563eb;
+        }
+
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+   
+<nav class="sticky top-0 z-50 border-b border-gray-200 shadow-sm navbar-blur">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center">
+                    <div class="flex items-center flex-shrink-0">
+                        <span class="text-2xl font-bold text-blue-600 cursor-pointer logo-animation">&lt;/&gt;</span>
+                        <span class="hidden ml-3 text-2xl font-semibold text-blue-600 sm:block">LeetLeap</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-baseline ml-10 space-x-4">
+                        <a href="index2.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-home"></i> Home
+                        </a>
+                       
+                        <a href="mixed.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-tasks"></i> Practice
+                        </a>
+                        <a href="workbook.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-book-open"></i> Workbooks
+                        </a>
+                        <a href="about.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-info-circle"></i> About
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="justify-center sm:flex-row">
+                <a href="index2.html" class="btn-primary">
+                    <i class="mr-2 fas fa-rocket"></i> Start Learning
+                </a>
+                
+            </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                        <i class="text-xl fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg md:hidden mobile-menu">
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-600">&lt;/&gt;</span>
+                    <span class="ml-2 text-lg font-semibold text-gray-800">Menu</span>
+                </div>
+                <button id="close-mobile-menu" class="p-1 text-gray-500 hover:text-gray-700">
+                    <i class="text-xl fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="p-4 space-y-2 bg-black">
+                <a href="index2.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-home"></i> Home
+                </a>
+                 
+                <a href="mixed.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-tasks"></i> Practice
+                </a>
+                <a href="workbook.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-book-open"></i> Workbooks
+                </a>
+                <a href="about.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-info-circle"></i> About
+                </a>
+                
+    <div class="pt-4 border-t border-gray-200">
+  <a href="index2.html"
+     class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
+    <i class="mr-2 fa-solid fa-play"></i> Start Learning
+  </a>
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Mobile menu overlay -->
+        <div id="mobile-overlay" class="fixed inset-0 z-40 hidden bg-black bg-opacity-50 md:hidden"></div>
+    </nav>
+
+
+
+
+
+    
+    
+    <div class="container max-w-full p-4 mx-auto">
+        <!-- Hero Section -->
+        <header class="p-8 mb-8 text-center shadow-lg bg-gradient-to-r from-blue-700 to-blue-900 rounded-xl">
+            <h1 class="text-4xl font-bold text-white">Practice Workbooks</h1>
+            <p class="mt-4 text-xl text-blue-100">Essential workbooks to master analytical skills</p>
+        </header>
+        
+        <div class="flex flex-col gap-8 lg:flex-row">
+            <!-- Main Content -->
+            <main class="w-full p-6 bg-white shadow-md rounded-xl">
+                <section class="mb-8">
+                    <h2 class="mb-6 text-2xl font-semibold text-blue-800">
+                        <i class="mr-2 fas fa-book-open"></i> Core Workbooks
+                    </h2>
+                    
+                    <div class="grid gap-6 md:grid-cols-2">
+                        <!-- Workbook 1 -->
+                        <div class="workbook-card">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3 class="mb-2 text-xl font-semibold">Quantitative Aptitude Complete Guide</h3>
+                                    <span class="inline-block px-3 py-1 mb-3 text-xs font-medium rounded-full difficulty-intermediate">
+                                        Intermediate
+                                    </span>
+                                </div>
+                                <div class="p-2 text-blue-600 bg-blue-100 rounded-lg">
+                                    <i class="text-xl fas fa-calculator"></i>
+                                </div>
+                            </div>
+                            <p class="mb-4 text-gray-700">
+                                Comprehensive coverage of all quantitative topics including percentages, ratios, time-speed-distance, and more with 200+ practice problems.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm text-gray-500">
+                                    <i class="mr-1 fas fa-file-alt"></i> 6 Chapters
+                                </div>
+                                <div class="flex space-x-3">
+                                    
+                                    <a href="https://tinyurl.com/ytv47jx9" class="text-blue-600 hover:text-blue-800">
+                                        Download <i class="ml-1 fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Workbook 2 -->
+                        <div class="workbook-card">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3 class="mb-2 text-xl font-semibold">Logical Reasoning Masterclass</h3>
+                                    <span class="inline-block px-3 py-1 mb-3 text-xs font-medium rounded-full difficulty-intermediate">
+                                        Intermediate
+                                    </span>
+                                </div>
+                                <div class="p-2 text-purple-600 bg-purple-100 rounded-lg">
+                                    <i class="text-xl fas fa-brain"></i>
+                                </div>
+                            </div>
+                            <p class="mb-4 text-gray-700">
+                                Develop critical thinking with puzzles, syllogisms, seating arrangements, and analytical problems (150+ questions with solutions).
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm text-gray-500">
+                                    <i class="mr-1 fas fa-file-alt"></i> 6 Chapters
+                                </div>
+                                <div class="flex space-x-3">
+                                    
+                                    <a href="https://tinyurl.com/ytv47jx9" class="text-blue-600 hover:text-blue-800">
+                                        Download <i class="ml-1 fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+   
+</body>
+ <script>
+        
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileTopicsToggle = document.getElementById('mobile-topics-toggle');
+        const mobileTopicsContent = document.getElementById('mobile-topics-content');
+        const mobileTopicsArrow = document.getElementById('mobile-topics-arrow');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenuFunc() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+        mobileOverlay.addEventListener('click', closeMobileMenuFunc);
+
+        // Mobile topics accordion
+        mobileTopicsToggle.addEventListener('click', () => {
+            const isHidden = mobileTopicsContent.classList.contains('hidden');
+            if (isHidden) {
+                mobileTopicsContent.classList.remove('hidden');
+                mobileTopicsArrow.style.transform = 'rotate(180deg)';
+            } else {
+                mobileTopicsContent.classList.add('hidden');
+                mobileTopicsArrow.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenuFunc();
+            }
+        });
+    </script>
+</html>

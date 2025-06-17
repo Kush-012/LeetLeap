@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System - Practice MCQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for MCQ interactions */
+        .mcq-option {
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+        
+        .mcq-option:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+        
+        .mcq-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+            font-weight: 600;
+        }
+        
+        .mcq-option.incorrect {
+            background-color: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .mcq-answer-text {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PDF optimization */
+        @media print {
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+            }
+            
+            .mcq-option {
+                break-inside: avoid;
+            }
+            
+            .border {
+                border: 1px solid #d1d5db !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    
+   
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2 text-sm text-gray-600">
+                        <span>Progress</span>
+                        <span id="progress-text">0/15 completed</span>
+                    </div>
+                    <div class="w-full h-2 bg-gray-200 rounded-full">
+                        <div id="progress-bar" class="h-2 transition-all duration-300 bg-blue-600 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+       <!-- MCQ 1 -->
+<div id="mcq1" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">1. What is 20% of 150?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 20</div>
+        <div class="mcq-option" data-correct="true">B. 30</div>
+        <div class="mcq-option">C. 40</div>
+        <div class="mcq-option">D. 50</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="1">
+        <span class="font-semibold text-green-600">Correct Answer: B. 30</span><br>
+        <p class="mt-2">20% = 0.2, 0.2 × 150 = 30.</p>
+    </div>
+</div>
+
+<!-- MCQ 2 -->
+<div id="mcq2" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">2. If a $120 item is discounted by 25%, what is the sale price?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. $80</div>
+        <div class="mcq-option">B. $85</div>
+        <div class="mcq-option" data-correct="true">C. $90</div>
+        <div class="mcq-option">D. $95</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="2">
+        <span class="font-semibold text-green-600">Correct Answer: C. $90</span><br>
+        <p class="mt-2">Discount = 25% of 120 = 0.25 × 120 = 30. Sale price = 120 − 30 = 90.</p>
+    </div>
+</div>
+
+<!-- MCQ 3 -->
+<div id="mcq3" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">3. What percentage is 45 out of 180?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option" data-correct="true">A. 25%</div>
+        <div class="mcq-option">B. 20%</div>
+        <div class="mcq-option">C. 30%</div>
+        <div class="mcq-option">D. 35%</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="3">
+        <span class="font-semibold text-green-600">Correct Answer: A. 25%</span><br>
+        <p class="mt-2">(45 ÷ 180) × 100 = 25%.</p>
+    </div>
+</div>
+
+<!-- MCQ 4 -->
+<div id="mcq4" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">4. If 10% of a number is 20, what is the number?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 100</div>
+        <div class="mcq-option">B. 150</div>
+        <div class="mcq-option" data-correct="true">C. 200</div>
+        <div class="mcq-option">D. 250</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="4">
+        <span class="font-semibold text-green-600">Correct Answer: C. 200</span><br>
+        <p class="mt-2">Let the number be x. 0.1x = 20, so x = 20 ÷ 0.1 = 200.</p>
+    </div>
+</div>
+
+<!-- MCQ 5 -->
+<div id="mcq5" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">5. A price increases from $40 to $48. What is the percentage increase?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 10%</div>
+        <div class="mcq-option">B. 15%</div>
+        <div class="mcq-option" data-correct="true">C. 20%</div>
+        <div class="mcq-option">D. 25%</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="5">
+        <span class="font-semibold text-green-600">Correct Answer: C. 20%</span><br>
+        <p class="mt-2">Increase = 48 − 40 = 8. Percentage increase = (8 ÷ 40) × 100 = 20%.</p>
+    </div>
+</div>
+
+<!-- MCQ 6 -->
+<div id="mcq6" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">6. If 30% of a class of 60 students are boys, how many boys are there?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 15</div>
+        <div class="mcq-option" data-correct="true">B. 18</div>
+        <div class="mcq-option">C. 20</div>
+        <div class="mcq-option">D. 22</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="6">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="6">
+        <span class="font-semibold text-green-600">Correct Answer: B. 18</span><br>
+        <p class="mt-2">30% of 60 = 0.3 × 60 = 18.</p>
+    </div>
+</div>
+
+<!-- MCQ 7 -->
+<div id="mcq7" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">7. A number is increased by 20% and then decreased by 20%. What is the net percentage change?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 0%</div>
+        <div class="mcq-option" data-correct="true">B. 4% decrease</div>
+        <div class="mcq-option">C. 4% increase</div>
+        <div class="mcq-option">D. 2% decrease</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="7">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="7">
+        <span class="font-semibold text-green-600">Correct Answer: B. 4% decrease</span><br>
+        <p class="mt-2">Let the number be 100. Increase by 20%: 100 × 1.2 = 120. Decrease by 20%: 120 × 0.8 = 96. Net change = (96 − 100) ÷ 100 × 100 = −4%.</p>
+    </div>
+</div>
+
+<!-- MCQ 8 -->
+<div id="mcq8" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">8. What is 175% of 40?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 60</div>
+        <div class="mcq-option">B. 65</div>
+        <div class="mcq-option" data-correct="true">C. 70</div>
+        <div class="mcq-option">D. 75</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="8">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="8">
+        <span class="font-semibold text-green-600">Correct Answer: C. 70</span><br>
+        <p class="mt-2">175% = 1.75, 1.75 × 40 = 70.</p>
+    </div>
+</div>
+
+<!-- MCQ 9 -->
+<div id="mcq9" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">9. A product’s price is reduced by 20%, and the sale price is $80. What was the original price?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. $90</div>
+        <div class="mcq-option" data-correct="true">B. $100</div>
+        <div class="mcq-option">C. $110</div>
+        <div class="mcq-option">D. $120</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="9">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="9">
+        <span class="font-semibold text-green-600">Correct Answer: B. $100</span><br>
+        <p class="mt-2">Let original price be x. 0.8x = 80, so x = 80 ÷ 0.8 = 100.</p>
+    </div>
+</div>
+
+<!-- MCQ 10 -->
+<div id="mcq10" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">10. If 50% of a number is 60, what is 25% of the same number?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 25</div>
+        <div class="mcq-option">B. 30</div>
+        <div class="mcq-option" data-correct="true">C. 30</div>
+        <div class="mcq-option">D. 40</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="10">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="10">
+        <span class="font-semibold text-green-600">Correct Answer: C. 30</span><br>
+        <p class="mt-2">Let the number be x. 0.5x = 60, so x = 60 ÷ 0.5 = 120. Then, 25% of 120 = 0.25 × 120 = 30.</p>
+    </div>
+</div>
+
+<!-- MCQ 11 -->
+<div id="mcq11" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">11. A store offers a 10% discount on a $50 item and then applies a 5% sales tax. What is the final price?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. $45.00</div>
+        <div class="mcq-option">B. $47.25</div>
+        <div class="mcq-option" data-correct="true">C. $47.25</div>
+        <div class="mcq-option">D. $50.00</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="11">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="11">
+        <span class="font-semibold text-green-600">Correct Answer: C. $47.25</span><br>
+        <p class="mt-2">Discount = 10% of 50 = 0.1 × 50 = 5. Price after discount = 50 − 5 = 45. Tax = 5% of 45 = 0.05 × 45 = 2.25. Final price = 45 + 2.25 = 47.25.</p>
+    </div>
+</div>
+
+<!-- MCQ 12 -->
+<div id="mcq12" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">12. If 75% of a number is 90, what is 150% of the same number?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 120</div>
+        <div class="mcq-option" data-correct="true">B. 180</div>
+        <div class="mcq-option">C. 200</div>
+        <div class="mcq-option">D. 210</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="12">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="12">
+        <span class="font-semibold text-green-600">Correct Answer: B. 180</span><br>
+        <p class="mt-2">Let the number be x. 0.75x = 90, so x = 90 ÷ 0.75 = 120. Then, 150% of 120 = 1.5 × 120 = 180.</p>
+    </div>
+</div>
+
+<!-- MCQ 13 -->
+<div id="mcq13" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">13. A population of 5,000 increases by 4% annually. What is the population after one year?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 5,100</div>
+        <div class="mcq-option" data-correct="true">B. 5,200</div>
+        <div class="mcq-option">C. 5,300</div>
+        <div class="mcq-option">D. 5,400</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="13">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="13">
+        <span class="font-semibold text-green-600">Correct Answer: B. 5,200</span><br>
+        <p class="mt-2">Increase = 4% of 5,000 = 0.04 × 5,000 = 200. New population = 5,000 + 200 = 5,200.</p>
+    </div>
+</div>
+
+<!-- MCQ 14 -->
+<div id="mcq14" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">14. A number is decreased by 15% to get 85. What is the original number?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 90</div>
+        <div class="mcq-option" data-correct="true">B. 100</div>
+        <div class="mcq-option">C. 110</div>
+        <div class="mcq-option">D. 120</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="14">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="14">
+        <span class="font-semibold text-green-600">Correct Answer: B. 100</span><br>
+        <p class="mt-2">Let the number be x. 0.85x = 85, so x = 85 ÷ 0.85 = 100.</p>
+    </div>
+</div>
+
+<!-- MCQ 15 -->
+<div id="mcq15" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">15. If a price is increased by 25% and then decreased by 20%, what is the net percentage change?</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. 0%</div>
+        <div class="mcq-option" data-correct="true">B. 0% change</div>
+        <div class="mcq-option">C. 5% increase</div>
+        <div class="mcq-option">D. 5% decrease</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="15">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="15">
+        <span class="font-semibold text-green-600">Correct Answer: B. 0% change</span><br>
+        <p class="mt-2">Let the number be 100. Increase by 25%: 100 × 1.25 = 125. Decrease by 20%: 125 × 0.8 = 100. Net change = (100 − 100) ÷ 100 × 100 = 0%.</p>
+    </div>
+</div>
+
+
+
+                </div>
+
+                <!-- Results Summary -->
+                <div id="results-summary" class="hidden p-6 mt-8 border rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-800">Quiz Results</h3>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600" id="correct-count">0</div>
+                            <div class="text-sm text-gray-600">Correct</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-600" id="incorrect-count">0</div>
+                            <div class="text-sm text-gray-600">Incorrect</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="score-percentage">0%</div>
+                            <div class="text-sm text-gray-600">Score</div>
+                        </div>
+                    </div>
+                </div>
+          
+
+
+    <script>
+        let answeredQuestions = new Set();
+        let correctAnswers = 0;
+        let totalQuestions = 15;
+
+        function updateProgress() {
+            const progressPercentage = (answeredQuestions.size / totalQuestions) * 100;
+            document.getElementById('progress-bar').style.width = progressPercentage + '%';
+            document.getElementById('progress-text').textContent = `${answeredQuestions.size}/${totalQuestions} completed`;
+            
+            if (answeredQuestions.size === totalQuestions) {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results-summary');
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('fade-in');
+            
+            const incorrectAnswers = answeredQuestions.size - correctAnswers;
+            const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('incorrect-count').textContent = incorrectAnswers;
+            document.getElementById('score-percentage').textContent = scorePercentage + '%';
+            
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("click", function(e) {
+            // Handle answer button clicks
+            if (e.target.classList.contains("mcq-answer-btn")) {
+                const mcqId = e.target.getAttribute("data-mcq");
+                const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
+                answer.classList.toggle("hidden");
+                
+                // Toggle button text
+                if (answer.classList.contains("hidden")) {
+                    e.target.textContent = "View Answer";
+                } else {
+                    e.target.textContent = "Hide Answer";
+                    answer.classList.add('fade-in');
+                }
+            }
+            
+            // Handle MCQ option selection
+            if (e.target.classList.contains("mcq-option")) {
+                const mcqContainer = e.target.closest('[id^="mcq"]');
+                const mcqId = mcqContainer.id.replace('mcq', '');
+                const options = e.target.parentElement.querySelectorAll(".mcq-option");
+                
+                // Clear previous selections
+                options.forEach(opt => {
+                    opt.classList.remove("correct", "incorrect");
+                });
+                
+                // Mark all correct answers and the selected answer
+                let isCorrect = false;
+                options.forEach(opt => {
+                    if (opt.hasAttribute("data-correct")) {
+                        opt.classList.add("correct");
+                        if (opt === e.target) {
+                            isCorrect = true;
+                        }
+                    } else if (opt === e.target) {
+                        opt.classList.add("incorrect");
+                    }
+                });
+                
+                // Update progress if this question hasn't been answered before
+                if (!answeredQuestions.has(mcqId)) {
+                    answeredQuestions.add(mcqId);
+                    if (isCorrect) {
+                        correctAnswers++;
+                    }
+                    updateProgress();
+                }
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                html {
+                    scroll-behavior: smooth;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

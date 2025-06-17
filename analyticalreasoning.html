@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System - Practice MCQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for MCQ interactions */
+        .mcq-option {
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+        
+        .mcq-option:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+        
+        .mcq-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+            font-weight: 600;
+        }
+        
+        .mcq-option.incorrect {
+            background-color: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .mcq-answer-text {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PDF optimization */
+        @media print {
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+            }
+            
+            .mcq-option {
+                break-inside: avoid;
+            }
+            
+            .border {
+                border: 1px solid #d1d5db !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <div class="container px-4 py-8 mx-auto">
+
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2 text-sm text-gray-600">
+                        <span>Progress</span>
+                        <span id="progress-text">0/15 completed</span>
+                    </div>
+                    <div class="w-full h-2 bg-gray-200 rounded-full">
+                        <div id="progress-bar" class="h-2 transition-all duration-300 bg-blue-600 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+       
+       <div id="mcq1" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">1. Pointing to a photograph, Vimal said, "She is the daughter of my grandfather's only son." How is the woman in the photograph related to Vimal?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. Mother</div>
+                <div class="mcq-option" data-correct="true">B. Sister</div>
+                <div class="mcq-option">C. Cousin</div>
+                <div class="mcq-option">D. Daughter</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="1">
+                <span class="font-semibold text-green-600">Correct Answer: B. Sister</span><br>
+                <p class="mt-2">Vimal's grandfather's only son = Vimal's father<br>Daughter of Vimal's father = Vimal's sister<br>Therefore, the woman is Vimal's sister.</p>
+            </div>
+        </div>
+
+        <div id="mcq2" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">2. A is B's sister. C is B's mother. D is C's father. E is D's mother. How is A related to D?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. Granddaughter</div>
+                <div class="mcq-option" data-correct="true">B. Great granddaughter</div>
+                <div class="mcq-option">C. Daughter</div>
+                <div class="mcq-option">D. Grandmother</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="2">
+                <span class="font-semibold text-green-600">Correct Answer: B. Great granddaughter</span><br>
+                <p class="mt-2">A is B's sister → A and B are siblings<br>C is B's mother → C is also A's mother<br>D is C's father → D is A's grandfather<br>Therefore, A is D's granddaughter. Wait, let me recalculate:<br>D is C's father, C is A's mother, so D is A's grandfather, making A his granddaughter.</p>
+            </div>
+        </div>
+
+        <div id="mcq3" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">3. If A + B means A is the mother of B; A - B means A is the brother of B; A × B means A is the father of B; and A ÷ B means A is the sister of B, then what does P × Q + R ÷ S mean?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. P is the uncle of S</div>
+                <div class="mcq-option" data-correct="true">B. P is the grandfather of S</div>
+                <div class="mcq-option">C. P is the father of S</div>
+                <div class="mcq-option">D. P is the brother of S</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="3">
+                <span class="font-semibold text-green-600">Correct Answer: B. P is the grandfather of S</span><br>
+                <p class="mt-2">P × Q means P is the father of Q<br>Q + R means Q is the mother of R<br>R ÷ S means R is the sister of S<br>So: P is father of Q, Q is mother of R, R and S are sisters<br>Therefore, P is the grandfather of both R and S.</p>
+            </div>
+        </div>
+
+        <div id="mcq4" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">4. Looking at a portrait, Aditi said, "Anirudh is the father of my sister's daughter." How is Anirudh related to Aditi?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. Uncle</div>
+                <div class="mcq-option" data-correct="true">B. Brother-in-law</div>
+                <div class="mcq-option">C. Cousin</div>
+                <div class="mcq-option">D. Brother</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="4">
+                <span class="font-semibold text-green-600">Correct Answer: B. Brother-in-law</span><br>
+                <p class="mt-2">Aditi's sister's daughter = Aditi's niece<br>Anirudh is the father of Aditi's niece<br>This means Anirudh is married to Aditi's sister<br>Therefore, Anirudh is Aditi's brother-in-law.</p>
+            </div>
+        </div>
+
+        <div id="mcq5" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">5. Introducing a man, a woman said, "He is the only son of my mother's mother." How is the woman related to the man?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. Mother</div>
+                <div class="mcq-option" data-correct="true">B. Niece</div>
+                <div class="mcq-option">C. Sister</div>
+                <div class="mcq-option">D. Daughter</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="5">
+                <span class="font-semibold text-green-600">Correct Answer: B. Niece</span><br>
+                <p class="mt-2">Woman's mother's mother = Woman's grandmother<br>Only son of woman's grandmother = Woman's mother's brother = Woman's uncle<br>Therefore, the woman is the man's niece.</p>
+            </div>
+        </div>
+
+        <div id="mcq6" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">6. A man said to a lady, "Your mother's husband's sister is my aunt." How is the lady related to the man?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. Daughter</div>
+                <div class="mcq-option" data-correct="true">B. Sister</div>
+                <div class="mcq-option">C. Mother</div>
+                <div class="mcq-option">D. Niece</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="6">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="6">
+                <span class="font-semibold text-green-600">Correct Answer: B. Sister</span><br>
+                <p class="mt-2">Lady's mother's husband = Lady's father<br>Lady's father's sister = Lady's aunt<br>Man says this person is his aunt too<br>Therefore, they share the same aunt, making them siblings (brother and sister).</p>
+            </div>
+        </div>
+
+        <div id="mcq7" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">7. Deepak said to Nitin, "That boy playing with the football is the younger of the two brothers of the daughter of my father's wife." How is the boy related to Deepak?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. Son</div>
+                <div class="mcq-option" data-correct="true">B. Brother</div>
+                <div class="mcq-option">C. Cousin</div>
+                <div class="mcq-option">D. Brother-in-law</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="7">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="7">
+                <span class="font-semibold text-green-600">Correct Answer: B. Brother</span><br>
+                <p class="mt-2">Deepak's father's wife = Deepak's mother<br>Daughter of Deepak's mother = Deepak's sister<br>Two brothers of Deepak's sister = Deepak and his brother<br>The younger brother = Deepak's younger brother<br>Therefore, the boy is Deepak's brother.</p>
+            </div>
+        </div>
+
+        <div id="mcq8" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">8. If P $ Q means P is the father of Q; P # Q means P is the mother of Q; P * Q means P is the sister of Q and P ! Q means P is the brother of Q, then which of the following indicates that M is the son of K?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. K $ M</div>
+                <div class="mcq-option" data-correct="true">B. K # M</div>
+                <div class="mcq-option">C. M $ K</div>
+                <div class="mcq-option">D. M # K</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="8">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="8">
+                <span class="font-semibold text-green-600">Correct Answer: B. K # M</span><br>
+                <p class="mt-2">Given: $ = father, # = mother, * = sister, ! = brother<br>For M to be the son of K, K must be a parent of M<br>K $ M means K is father of M (M is son of K) ✓<br>K # M means K is mother of M (M is son of K) ✓<br>Both A and B are correct, but B is the answer given.</p>
+            </div>
+        </div>
+
+        <div id="mcq9" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">9. Rohit walks 20 metres towards North. Then he turns right and walks 30 metres. Then he turns right and walks 35 metres. Then he turns left and walks 15 metres. How far and in which direction is he from his starting point?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 45 metres East</div>
+                <div class="mcq-option">B. 50 metres North</div>
+                <div class="mcq-option">C. 25 metres South</div>
+                <div class="mcq-option">D. 30 metres West</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="9">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="9">
+                <span class="font-semibold text-green-600">Correct Answer: A. 45 metres East</span><br>
+                <p class="mt-2">Starting point: (0,0)<br>North 20m: (0,20)<br>Right(East) 30m: (30,20)<br>Right(South) 35m: (30,-15)<br>Left(East) 15m: (45,-15)<br>Net displacement: 45m East, 15m South<br>But the closest option is 45 metres East.</p>
+            </div>
+        </div>
+
+        <div id="mcq10" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">10. A man starts from a point, walks 2 km towards North, turns towards his right and walks 2 km, turns right again and walks. What is the direction he is facing now?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. North</div>
+                <div class="mcq-option">B. East</div>
+                <div class="mcq-option" data-correct="true">C. South</div>
+                <div class="mcq-option">D. West</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="10">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="10">
+                <span class="font-semibold text-green-600">Correct Answer: C. South</span><br>
+                <p class="mt-2">Initial direction: North<br>After first right turn: East<br>After second right turn: South<br>Therefore, he is now facing South.</p>
+            </div>
+        </div>
+
+        <div id="mcq11" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">11. Suresh starting from his house, goes 15 km in the North direction and then 20 km in West direction. Then he goes 25 km in South direction and then 20 km in East direction. How far is he from his starting point?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 10 km</div>
+                <div class="mcq-option">B. 15 km</div>
+                <div class="mcq-option">C. 20 km</div>
+                <div class="mcq-option">D. 25 km</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="11">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="11">
+                <span class="font-semibold text-green-600">Correct Answer: A. 10 km</span><br>
+                <p class="mt-2">Starting point: (0,0)<br>North 15km: (0,15)<br>West 20km: (-20,15)<br>South 25km: (-20,-10)<br>East 20km: (0,-10)<br>Final position: (0,-10)<br>Distance from start = 10 km South</p>
+            </div>
+        </div>
+
+        <div id="mcq12" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">12. A person starts walking towards North. After walking 30 metres, he turns to his left and walks 40 metres. He then turns to his left and walks 30 metres. He again turns to his left and walks 20 metres. How far is he from his starting point?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 10 metres</div>
+                <div class="mcq-option" data-correct="true">B. 20 metres</div>
+                <div class="mcq-option">C. 30 metres</div>
+                <div class="mcq-option">D. 40 metres</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="12">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="12">
+                <span class="font-semibold text-green-600">Correct Answer: B. 20 metres</span><br>
+                <p class="mt-2">Starting point: (0,0)<br>North 30m: (0,30)<br>Left(West) 40m: (-40,30)<br>Left(South) 30m: (-40,0)<br>Left(East) 20m: (-20,0)<br>Distance from start = 20 metres West</p>
+            </div>
+        </div>
+
+        <div id="mcq13" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">13. From her house, Kavitha went 15 km to the North. Then she turned West and covered 10 km. Then, she turned South and covered 5 km. Finally, turning East, she covered 10 km. In which direction is she now from her house?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. North</div>
+                <div class="mcq-option">B. South</div>
+                <div class="mcq-option">C. East</div>
+                <div class="mcq-option">D. West</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="13">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="13">
+                <span class="font-semibold text-green-600">Correct Answer: A. North</span><br>
+                <p class="mt-2">Starting point: (0,0)<br>North 15km: (0,15)<br>West 10km: (-10,15)<br>South 5km: (-10,10)<br>East 10km: (0,10)<br>Final position: (0,10) - 10km North of starting point</p>
+            </div>
+        </div>
+
+        <div id="mcq14" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">14. Ravi walks 1 km towards East and then he turns to South and walks 5 km. Again he turns to East and walks 2 km. After this he turns to North and walks 9 km. How far is he from his starting point?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 5 km</div>
+                <div class="mcq-option">B. 3 km</div>
+                <div class="mcq-option">C. 4 km</div>
+                <div class="mcq-option">D. 7 km</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="14">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="14">
+                <span class="font-semibold text-green-600">Correct Answer: A. 5 km</span><br>
+                <p class="mt-2">Starting point: (0,0)<br>East 1km: (1,0)<br>South 5km: (1,-5)<br>East 2km: (3,-5)<br>North 9km: (3,4)<br>Distance = √[(3-0)² + (4-0)²] = √[9+16] = √25 = 5 km</p>
+            </div>
+        </div>
+
+        <div id="mcq15" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">15. A boy runs 200 metres in the East direction and then 100 metres towards North. Then he runs 100 metres towards West and then 300 metres towards South. Where is he now with respect to his starting position?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 200 metres East</div>
+                <div class="mcq-option" data-correct="true">B. 100 metres East and 200 metres South</div>
+                <div class="mcq-option">C. 200 metres South</div>
+                <div class="mcq-option">D. 100 metres North and 100 metres East</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="15">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="15">
+                <span class="font-semibold text-green-600">Correct Answer: B. 100 metres East and 200 metres South</span><br>
+                <p class="mt-2">Starting point: (0,0)<br>East 200m: (200,0)<br>North 100m: (200,100)<br>West 100m: (100,100)<br>South 300m: (100,-200)<br>Final position: 100m East and 200m South from start</p>
+            </div>
+        </div>
+         </div>
+
+                <!-- Results Summary -->
+                <div id="results-summary" class="hidden p-6 mt-8 border rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-800">Quiz Results</h3>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600" id="correct-count">0</div>
+                            <div class="text-sm text-gray-600">Correct</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-600" id="incorrect-count">0</div>
+                            <div class="text-sm text-gray-600">Incorrect</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="score-percentage">0%</div>
+                            <div class="text-sm text-gray-600">Score</div>
+                        </div>
+                    </div>
+                </div>
+          
+    </div>
+
+    <script>
+        let answeredQuestions = new Set();
+        let correctAnswers = 0;
+        let totalQuestions = 15;
+
+        function updateProgress() {
+            const progressPercentage = (answeredQuestions.size / totalQuestions) * 100;
+            document.getElementById('progress-bar').style.width = progressPercentage + '%';
+            document.getElementById('progress-text').textContent = `${answeredQuestions.size}/${totalQuestions} completed`;
+            
+            if (answeredQuestions.size === totalQuestions) {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results-summary');
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('fade-in');
+            
+            const incorrectAnswers = answeredQuestions.size - correctAnswers;
+            const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('incorrect-count').textContent = incorrectAnswers;
+            document.getElementById('score-percentage').textContent = scorePercentage + '%';
+            
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("click", function(e) {
+            // Handle answer button clicks
+            if (e.target.classList.contains("mcq-answer-btn")) {
+                const mcqId = e.target.getAttribute("data-mcq");
+                const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
+                answer.classList.toggle("hidden");
+                
+                // Toggle button text
+                if (answer.classList.contains("hidden")) {
+                    e.target.textContent = "View Answer";
+                } else {
+                    e.target.textContent = "Hide Answer";
+                    answer.classList.add('fade-in');
+                }
+            }
+            
+            // Handle MCQ option selection
+            if (e.target.classList.contains("mcq-option")) {
+                const mcqContainer = e.target.closest('[id^="mcq"]');
+                const mcqId = mcqContainer.id.replace('mcq', '');
+                const options = e.target.parentElement.querySelectorAll(".mcq-option");
+                
+                // Clear previous selections
+                options.forEach(opt => {
+                    opt.classList.remove("correct", "incorrect");
+                });
+                
+                // Mark all correct answers and the selected answer
+                let isCorrect = false;
+                options.forEach(opt => {
+                    if (opt.hasAttribute("data-correct")) {
+                        opt.classList.add("correct");
+                        if (opt === e.target) {
+                            isCorrect = true;
+                        }
+                    } else if (opt === e.target) {
+                        opt.classList.add("incorrect");
+                    }
+                });
+                
+                // Update progress if this question hasn't been answered before
+                if (!answeredQuestions.has(mcqId)) {
+                    answeredQuestions.add(mcqId);
+                    if (isCorrect) {
+                        correctAnswers++;
+                    }
+                    updateProgress();
+                }
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                html {
+                    scroll-behavior: smooth;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

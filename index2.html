@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytical Skills</title>
+    <script src="https://cdn.tailwindcss.com/3.3.5"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style type="text/tailwindcss">
+          .navbar-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        } 
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .logo-animation {
+            transition: all 0.3s ease;
+        }
+        .logo-animation:hover {
+            transform: scale(1.05);
+            color: #2563eb;
+        }
+        @layer components {
+            .btn-primary {
+                @apply px-6 py-2 font-medium text-white transition-all duration-200 bg-blue-600 border border-blue-600 rounded-lg hover:bg-blue-700 hover:shadow-md active:scale-[0.98];
+            }
+            .btn-secondary {
+                @apply px-6 py-2 font-medium text-gray-700 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 hover:shadow-md active:scale-[0.98];
+            }
+            .card {
+                @apply p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200;
+            }
+            .topic-item {
+                @apply p-3 transition-all duration-200 rounded-lg cursor-pointer bg-blue-50 hover:bg-blue-100 hover:translate-x-1 hover:shadow-sm;
+            }
+            .topic-item.active {
+                @apply bg-blue-200 font-medium border-l-4 border-blue-600;
+            } 
+            .mcq-option {
+                @apply p-3 border rounded-lg cursor-pointer transition-colors duration-150 hover:bg-blue-50;
+            }
+            .mcq-option.correct {
+                @apply bg-green-100 border-green-500;
+            }
+            .mcq-option.incorrect {
+                @apply bg-red-100 border-red-500;
+            }
+            .mcq-answer-text {
+                @apply p-4 mt-4 text-lg rounded-lg bg-blue-50 animate-fadeIn;
+            }
+            .tab-active {
+                @apply text-white bg-blue-600 border-blue-600 hover:bg-blue-700;
+            }
+            .resource-card {
+                @apply p-4 transition-all duration-200 bg-white rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1;
+            }
+            .loading-spinner {
+                @apply inline-block w-6 h-6 border-2 border-blue-200 border-t-blue-600 rounded-full animate-spin;
+            }
+        } 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        } 
+        .animate-fadeIn {
+            animation: fadeIn 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    
+
+
+
+ <nav class="sticky top-0 z-50 border-b border-gray-200 shadow-sm navbar-blur">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center">
+                    <div class="flex items-center flex-shrink-0">
+                        <span class="text-2xl font-bold text-blue-600 cursor-pointer logo-animation">&lt;/&gt;</span>
+                        <span class="hidden ml-3 text-2xl font-semibold text-blue-600 sm:block">LeetLeap</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-baseline ml-10 space-x-4">
+                        <a href="index.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-home"></i> Home
+                        </a>
+                       
+                        <a href="mixed.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-tasks"></i> Practice
+                        </a>
+                        <a href="workbook.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-book-open"></i> Workbooks
+                        </a>
+                        <a href="about.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-info-circle"></i> About
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="justify-center sm:flex-row">
+                <a href="index.html" class="btn-primary">
+                    <i class="mr-2 fas fa-rocket"></i> Start Learning
+                </a>
+                
+            </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                        <i class="text-xl fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg md:hidden mobile-menu">
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-600">&lt;/&gt;</span>
+                    <span class="ml-2 text-lg font-semibold text-gray-800">Menu</span>
+                </div>
+                <button id="close-mobile-menu" class="p-1 text-gray-500 hover:text-gray-700">
+                    <i class="text-xl fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="p-4 space-y-2 bg-black">
+                <a href="index.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-home"></i> Home
+                </a>
+                 
+                <a href="mixed.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-tasks"></i> Practice
+                </a>
+                <a href="workbook.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-book-open"></i> Workbooks
+                </a>
+                <a href="about.html" class="flex items-center px-3 py-2 font-semibold text-white transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-info-circle"></i> About
+                </a>
+                
+    <div class="pt-4 border-t border-gray-200">
+  <a href="index"
+     class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
+    <i class="mr-2 fa-solid fa-play"></i> Start Learning
+  </a>
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Mobile menu overlay -->
+        <div id="mobile-overlay" class="fixed inset-0 z-40 hidden bg-black bg-opacity-50 md:hidden"></div>
+    </nav>
+
+
+
+    
+    <div class="container max-w-full p-4 mx-auto">
+        <div class="flex flex-col gap-8 lg:flex-row">
+            <!-- Topics Sidebar -->
+            <aside class="w-full p-6 bg-white shadow-md rounded-xl lg:w-1/4">
+                <div class="sticky top-6">
+                    <!-- Workbooks Section -->
+                    <section class="mb-8">
+                        <h2 class="flex items-center pb-3 mb-4 text-xl font-semibold text-blue-800 border-b border-gray-200">
+                            <i class="mr-2 fas fa-book-open"></i> Workbooks
+                        </h2>
+                        <div class="resource-card">
+                            <a href="https://tinyurl.com/ytv47jx9" target="_blank" class="flex items-center font-medium text-blue-600 hover:text-blue-800">
+                                <i class="mr-2 fas fa-external-link-alt"></i> Comprehensive Workbooks
+                            </a>
+                            <p class="mt-2 text-sm text-gray-600">Practice problems and explanations for all analytical topics.</p>
+                        </div>
+                    </section>
+                    
+                    <!-- Topics Section -->
+                    <section class="mb-8">
+                        <h2 class="flex items-center pb-3 mb-4 text-xl font-semibold text-blue-800 border-b border-gray-200">
+                            <i class="mr-2 fas fa-list-ul"></i> Topics
+                        </h2>
+                        <div class="space-y-2" id="topicsList">
+                            <!-- Topics will be populated by JavaScript -->
+                        </div>
+                    </section>
+                    
+                    <!-- Practice Section -->
+                    <section>
+                        <h2 class="flex items-center pb-3 mb-4 text-xl font-semibold text-blue-800 border-b border-gray-200">
+                            <i class="mr-2 fas fa-tasks"></i> Practice
+                        </h2>
+                        <div class="resource-card">
+                            <a href="mixed.html" target="_blank" class="flex items-center font-medium text-blue-600 hover:text-blue-800">
+                                Mixed MCQs Practice
+                            </a>
+                            <p class="mt-2 text-sm text-gray-600">Test your knowledge with randomized questions.</p>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+            
+            <!-- Main Content Area -->
+            <main class="w-full p-6 bg-white shadow-md rounded-xl lg:w-3/4">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-semibold text-blue-800" id="selectedTopicTitle">
+                        Vedic Maths
+                    </h2>
+                    <div class="text-sm text-gray-500">
+                        Click options to check answers
+                    </div>
+                </div>
+                
+                <!-- Content Area -->
+                <div id="contentArea">
+                    <!-- Content will be loaded dynamically -->
+                    <div class="flex items-center justify-center p-8">
+                        <div class="mr-3 loading-spinner"></div>
+                        <span class="text-gray-500">Loading content...</span>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="p-6 mt-12 text-center text-gray-600 bg-white border-t border-gray-200">
+        <p>© <span id="currentYear"></span> Analytical Skills Practice. All rights reserved.</p>
+        <p class="mt-2 text-sm">For effective learning and practice.</p>
+    </footer>
+
+    <script>
+        // Topics configuration - mapping topic names to HTML files
+        const topics = {
+            'Vedic Maths': 'vedic.html',
+            'Number System': 'number.html',
+            'Average': 'average.html',
+            'Percentage': 'percentage.html',
+            'Profit and Loss': 'profit.html',
+            'Simple and Compound Interest': 'simpleint.html',
+            'Logical Reasoning': 'logicalreasoning.html',
+            'Ratio and Proportions': 'ratio.html',
+            'Alligation and Mixtures': 'allegation.html',
+            'Permutation and Combination': 'pandc.html',
+            'Probability': 'prob.html',
+            'Analytical Reasoning': 'analyticalreasoning.html',
+            'Time and Work': 'timeandwork.html',
+            'Time, Speed and Distance': 'disspeed.html',
+            'Syllogism': 'syllogism.html',
+            'Mensuration': 'mensuration.html',
+            'Heights and Distance': 'height-and-distance.html',
+            'Data Interpretation': 'data-interpretation.html'
+        };
+
+        let selectedTopic = '';
+
+        // Initialize the page
+        function init() {
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Get selected topic from URL or default to first topic
+            const urlParams = new URLSearchParams(window.location.search);
+            selectedTopic = urlParams.get('topic') || Object.keys(topics)[0];
+            
+            // Render topics list
+            renderTopicsList();
+            
+            // Load selected topic content
+            loadTopicContent(selectedTopic);
+        }
+
+        // Render the topics list in sidebar
+        function renderTopicsList() {
+            const topicsListElement = document.getElementById('topicsList');
+            topicsListElement.innerHTML = '';
+
+            Object.keys(topics).forEach(topic => {
+                const topicItem = document.createElement('div');
+                topicItem.className = `topic-item ${selectedTopic === topic ? 'active' : ''}`;
+                topicItem.onclick = () => selectTopic(topic);
+                
+                topicItem.innerHTML = `
+                    <i class="mr-2 fas ${selectedTopic === topic ? 'fa-check-circle' : 'fa-circle'}"></i>
+                    ${topic}
+                `;
+                
+                topicsListElement.appendChild(topicItem);
+            });
+        }
+
+        // Select a topic
+        function selectTopic(topic) {
+            selectedTopic = topic;
+            
+            // Update URL without page reload
+            const url = new URL(window.location);
+            url.searchParams.set('topic', topic);
+            window.history.pushState({}, '', url);
+            
+            // Update UI
+            renderTopicsList();
+            loadTopicContent(topic);
+        }
+
+        // Load topic content from HTML file
+        async function loadTopicContent(topic) {
+            // Update title
+            document.getElementById('selectedTopicTitle').textContent = topic;
+            
+            const contentArea = document.getElementById('contentArea');
+            const fileName = topics[topic];
+            
+            // Show loading state
+            contentArea.innerHTML = `
+                <div class="flex items-center justify-center p-8">
+                    <div class="mr-3 loading-spinner"></div>
+                    <span class="text-gray-500">Loading ${topic}...</span>
+                </div>
+            `;
+            
+            try {
+                // Fetch the HTML content from the file
+                const response = await fetch(fileName);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const htmlContent = await response.text();
+                
+                // Load the content into the content area
+                contentArea.innerHTML = htmlContent;
+                
+                // Re-initialize any interactive elements if needed
+                initializeInteractiveElements();
+                
+            } catch (error) {
+                console.error('Error loading content:', error);
+                
+                // Show error message or fallback content
+                contentArea.innerHTML = `
+                    <div class="p-8 text-center text-gray-500 rounded-lg bg-red-50">
+                        <i class="mb-4 text-4xl text-red-400 fas fa-exclamation-triangle"></i>
+                        <p class="text-xl text-red-600">Content for "${topic}" could not be loaded</p>
+                        <p class="mt-2 text-sm text-gray-600">
+                            Please make sure the file "${fileName}" exists in the same directory.
+                        </p>
+                        <p class="mt-2 text-sm text-gray-600">Error: ${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize interactive elements after content is loaded
+        function initializeInteractiveElements() {
+            // Add click handlers for MCQ options if they exist in the loaded content
+            const mcqOptions = document.querySelectorAll('.mcq-option');
+            mcqOptions.forEach(option => {
+                if (!option.onclick) { // Only add if not already assigned
+                    option.onclick = function() {
+                        selectOption(this);
+                    };
+                }
+            });
+        }
+
+        // Handle MCQ option selection (if your HTML files contain MCQs)
+        function selectOption(element) {
+            // Remove previous selections from the same question
+            const questionContainer = element.closest('.mcq-question, .question-container, .bg-white');
+            if (questionContainer) {
+                const options = questionContainer.querySelectorAll('.mcq-option');
+                options.forEach(option => {
+                    option.classList.remove('correct', 'incorrect', 'selected');
+                });
+            }
+
+            // Add selected class
+            element.classList.add('selected');
+            
+            // Check if this option has data attributes for correct/incorrect
+            const isCorrect = element.dataset.correct === 'true';
+            
+            if (isCorrect) {
+                element.classList.add('correct');
+            } else {
+                element.classList.add('incorrect');
+            }
+
+            // Show explanation if it exists
+            const explanation = questionContainer?.querySelector('.answer-explanation, .mcq-answer-text');
+            if (explanation) {
+                explanation.classList.remove('hidden');
+                explanation.style.display = 'block';
+            }
+        }
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function(event) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const topic = urlParams.get('topic') || Object.keys(topics)[0];
+            selectedTopic = topic;
+            renderTopicsList();
+            loadTopicContent(topic);
+        });
+
+          const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileTopicsToggle = document.getElementById('mobile-topics-toggle');
+        const mobileTopicsContent = document.getElementById('mobile-topics-content');
+        const mobileTopicsArrow = document.getElementById('mobile-topics-arrow');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenuFunc() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+        mobileOverlay.addEventListener('click', closeMobileMenuFunc);
+
+        // Mobile topics accordion
+        mobileTopicsToggle.addEventListener('click', () => {
+            const isHidden = mobileTopicsContent.classList.contains('hidden');
+            if (isHidden) {
+                mobileTopicsContent.classList.remove('hidden');
+                mobileTopicsArrow.style.transform = 'rotate(180deg)';
+            } else {
+                mobileTopicsContent.classList.add('hidden');
+                mobileTopicsArrow.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenuFunc();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System - Practice MCQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for MCQ interactions */
+        .mcq-option {
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+        
+        .mcq-option:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+        
+        .mcq-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+            font-weight: 600;
+        }
+        
+        .mcq-option.incorrect {
+            background-color: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .mcq-answer-text {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PDF optimization */
+        @media print {
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+            }
+            
+            .mcq-option {
+                break-inside: avoid;
+            }
+            
+            .border {
+                border: 1px solid #d1d5db !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <div class="container px-4 py-8 mx-auto">
+
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2 text-sm text-gray-600">
+                        <span>Progress</span>
+                        <span id="progress-text">0/15 completed</span>
+                    </div>
+                    <div class="w-full h-2 bg-gray-200 rounded-full">
+                        <div id="progress-bar" class="h-2 transition-all duration-300 bg-blue-600 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+<div id="mcq1" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">1. A bar chart shows monthly sales: Jan-50k, Feb-65k, Mar-40k, Apr-80k, May-70k. What is the percentage increase in sales from March to April?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 75%</div>
+                <div class="mcq-option" data-correct="true">B. 100%</div>
+                <div class="mcq-option">C. 50%</div>
+                <div class="mcq-option">D. 125%</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="1">
+                <span class="font-semibold text-green-600">Correct Answer: B. 100%</span><br>
+                <p class="mt-2">Percentage increase = [(80-40)/40] × 100 = (40/40) × 100 = 100%</p>
+            </div>
+        </div>
+
+        <div id="mcq2" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">2. A pie chart shows budget allocation: Education-30%, Healthcare-25%, Defense-20%, Infrastructure-15%, Others-10%. If total budget is ₹500 crores, what amount is allocated to Healthcare and Infrastructure combined?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. ₹180 crores</div>
+                <div class="mcq-option" data-correct="true">B. ₹200 crores</div>
+                <div class="mcq-option">C. ₹175 crores</div>
+                <div class="mcq-option">D. ₹225 crores</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="2">
+                <span class="font-semibold text-green-600">Correct Answer: B. ₹200 crores</span><br>
+                <p class="mt-2">Healthcare + Infrastructure = 25% + 15% = 40% of ₹500 crores = ₹200 crores</p>
+            </div>
+        </div>
+
+        <div id="mcq3" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">3. A line graph shows temperature variations: Day 1-25°C, Day 2-30°C, Day 3-22°C, Day 4-35°C, Day 5-28°C. What is the average temperature over these 5 days?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 26°C</div>
+                <div class="mcq-option" data-correct="true">B. 28°C</div>
+                <div class="mcq-option">C. 30°C</div>
+                <div class="mcq-option">D. 27°C</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="3">
+                <span class="font-semibold text-green-600">Correct Answer: B. 28°C</span><br>
+                <p class="mt-2">Average = (25 + 30 + 22 + 35 + 28) ÷ 5 = 140 ÷ 5 = 28°C</p>
+            </div>
+        </div>
+
+        <div id="mcq4" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">4. A table shows production data: Factory A produces 200 units/day, Factory B produces 150 units/day, Factory C produces 300 units/day. If Factory A works for 20 days, Factory B for 25 days, and Factory C for 18 days, what is the total production?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 13,150 units</div>
+                <div class="mcq-option" data-correct="true">B. 13,150 units</div>
+                <div class="mcq-option">C. 12,900 units</div>
+                <div class="mcq-option">D. 13,500 units</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="4">
+                <span class="font-semibold text-green-600">Correct Answer: B. 13,150 units</span><br>
+                <p class="mt-2">Total = (200×20) + (150×25) + (300×18) = 4000 + 3750 + 5400 = 13,150 units</p>
+            </div>
+        </div>
+
+        <div id="mcq5" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">5. A histogram shows frequency distribution of student scores: 0-20 (5 students), 20-40 (12 students), 40-60 (18 students), 60-80 (15 students), 80-100 (10 students). What percentage of students scored above 60?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 40%</div>
+                <div class="mcq-option" data-correct="true">B. 41.67%</div>
+                <div class="mcq-option">C. 45%</div>
+                <div class="mcq-option">D. 38%</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="5">
+                <span class="font-semibold text-green-600">Correct Answer: B. 41.67%</span><br>
+                <p class="mt-2">Students above 60 = 15 + 10 = 25. Total students = 60. Percentage = (25/60) × 100 = 41.67%</p>
+            </div>
+        </div>
+
+        <div id="mcq6" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">6. A scatter plot shows correlation between hours studied and marks obtained. If the correlation coefficient is 0.85, what can we conclude?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. Weak positive correlation</div>
+                <div class="mcq-option" data-correct="true">B. Strong positive correlation</div>
+                <div class="mcq-option">C. Strong negative correlation</div>
+                <div class="mcq-option">D. No correlation</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="6">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="6">
+                <span class="font-semibold text-green-600">Correct Answer: B. Strong positive correlation</span><br>
+                <p class="mt-2">Correlation coefficient of 0.85 indicates a strong positive correlation (close to 1.0)</p>
+            </div>
+        </div>
+
+        <div id="mcq7" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">7. A company's quarterly profits are: Q1-₹2.5L, Q2-₹3.2L, Q3-₹2.8L, Q4-₹4.1L. What is the median quarterly profit?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. ₹2.8L</div>
+                <div class="mcq-option" data-correct="true">B. ₹3.0L</div>
+                <div class="mcq-option">C. ₹3.2L</div>
+                <div class="mcq-option">D. ₹3.15L</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="7">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="7">
+                <span class="font-semibold text-green-600">Correct Answer: B. ₹3.0L</span><br>
+                <p class="mt-2">Arranged in order: 2.5, 2.8, 3.2, 4.1. Median = (2.8 + 3.2)/2 = ₹3.0L</p>
+            </div>
+        </div>
+
+        <div id="mcq8" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">8. A double bar chart compares sales of two products over 4 months. Product A: Jan-40, Feb-35, Mar-50, Apr-45. Product B: Jan-30, Feb-40, Mar-35, Apr-55. In which month was the difference between the two products maximum?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. January</div>
+                <div class="mcq-option">B. February</div>
+                <div class="mcq-option" data-correct="true">C. March</div>
+                <div class="mcq-option">D. April</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="8">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="8">
+                <span class="font-semibold text-green-600">Correct Answer: C. March</span><br>
+                <p class="mt-2">Differences: Jan(10), Feb(5), Mar(15), Apr(10). Maximum difference is 15 in March.</p>
+            </div>
+        </div>
+
+        <div id="mcq9" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">9. A frequency polygon shows distribution of ages in a survey. The modal class is 25-35 years with frequency 45. If the total sample size is 200, what percentage of the sample falls in the modal class?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 20%</div>
+                <div class="mcq-option" data-correct="true">B. 22.5%</div>
+                <div class="mcq-option">C. 25%</div>
+                <div class="mcq-option">D. 18%</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="9">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="9">
+                <span class="font-semibold text-green-600">Correct Answer: B. 22.5%</span><br>
+                <p class="mt-2">Percentage = (45/200) × 100 = 22.5%</p>
+            </div>
+        </div>
+
+        <div id="mcq10" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">10. A cumulative frequency curve shows that 60% of students scored below 75 marks and 80% scored below 85 marks. If there are 250 students, how many scored between 75 and 85 marks?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 40 students</div>
+                <div class="mcq-option" data-correct="true">B. 50 students</div>
+                <div class="mcq-option">C. 60 students</div>
+                <div class="mcq-option">D. 45 students</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="10">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="10">
+                <span class="font-semibold text-green-600">Correct Answer: B. 50 students</span><br>
+                <p class="mt-2">Students between 75-85 = 80% - 60% = 20% of 250 = 50 students</p>
+            </div>
+        </div>
+
+        <div id="mcq11" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">11. A box plot shows data distribution with Q1=15, Q2=25, Q3=35, minimum=5, maximum=50. What is the interquartile range (IQR)?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 15</div>
+                <div class="mcq-option" data-correct="true">B. 20</div>
+                <div class="mcq-option">C. 25</div>
+                <div class="mcq-option">D. 30</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="11">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="11">
+                <span class="font-semibold text-green-600">Correct Answer: B. 20</span><br>
+                <p class="mt-2">IQR = Q3 - Q1 = 35 - 15 = 20</p>
+            </div>
+        </div>
+
+        <div id="mcq12" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">12. A radar chart shows performance ratings (scale 1-10) across 5 skills: Communication-8, Leadership-6, Technical-9, Problem-solving-7, Teamwork-5. What is the overall average rating?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 6.8</div>
+                <div class="mcq-option" data-correct="true">B. 7.0</div>
+                <div class="mcq-option">C. 7.2</div>
+                <div class="mcq-option">D. 6.5</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="12">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="12">
+                <span class="font-semibold text-green-600">Correct Answer: B. 7.0</span><br>
+                <p class="mt-2">Average = (8 + 6 + 9 + 7 + 5) ÷ 5 = 35 ÷ 5 = 7.0</p>
+            </div>
+        </div>
+
+        <div id="mcq13" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">13. A stacked area chart shows website traffic sources over 6 months. Direct traffic consistently accounts for 40% of total traffic. If total traffic in month 6 was 10,000 visits, how many were from direct traffic?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 3,500 visits</div>
+                <div class="mcq-option" data-correct="true">B. 4,000 visits</div>
+                <div class="mcq-option">C. 4,500 visits</div>
+                <div class="mcq-option">D. 3,800 visits</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="13">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="13">
+                <span class="font-semibold text-green-600">Correct Answer: B. 4,000 visits</span><br>
+                <p class="mt-2">Direct traffic = 40% of 10,000 = 0.40 × 10,000 = 4,000 visits</p>
+            </div>
+        </div>
+
+        <div id="mcq14" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">14. A heatmap shows sales performance across regions and quarters. Region A shows consistent growth: Q1-100k, Q2-120k, Q3-140k, Q4-160k. What is the growth rate from Q1 to Q4?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 50%</div>
+                <div class="mcq-option" data-correct="true">B. 60%</div>
+                <div class="mcq-option">C. 55%</div>
+                <div class="mcq-option">D. 40%</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="14">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="14">
+                <span class="font-semibold text-green-600">Correct Answer: B. 60%</span><br>
+                <p class="mt-2">Growth rate = [(160-100)/100] × 100 = (60/100) × 100 = 60%</p>
+            </div>
+        </div>
+
+        <div id="mcq15" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">15. A treemap visualization shows market share: Company A-35%, Company B-25%, Company C-20%, Company D-12%, Others-8%. If the total market value is ₹800 crores, what is the combined market value of Company B and Company C?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. ₹320 crores</div>
+                <div class="mcq-option" data-correct="true">B. ₹360 crores</div>
+                <div class="mcq-option">C. ₹340 crores</div>
+                <div class="mcq-option">D. ₹380 crores</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="15">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="15">
+                <span class="font-semibold text-green-600">Correct Answer: B. ₹360 crores</span><br>
+                <p class="mt-2">Company B + Company C = 25% + 20% = 45% of ₹800 crores = ₹360 crores</p>
+            </div>
+        </div>
+
+                
+    </div>
+  <!-- Results Summary -->
+                <div id="results-summary" class="hidden p-6 mt-8 border rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-800">Quiz Results</h3>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600" id="correct-count">0</div>
+                            <div class="text-sm text-gray-600">Correct</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-600" id="incorrect-count">0</div>
+                            <div class="text-sm text-gray-600">Incorrect</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="score-percentage">0%</div>
+                            <div class="text-sm text-gray-600">Score</div>
+                        </div>
+                    </div>
+                </div>
+          
+    </div>
+
+    <script>
+        let answeredQuestions = new Set();
+        let correctAnswers = 0;
+        let totalQuestions = 15;
+
+        function updateProgress() {
+            const progressPercentage = (answeredQuestions.size / totalQuestions) * 100;
+            document.getElementById('progress-bar').style.width = progressPercentage + '%';
+            document.getElementById('progress-text').textContent = `${answeredQuestions.size}/${totalQuestions} completed`;
+            
+            if (answeredQuestions.size === totalQuestions) {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results-summary');
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('fade-in');
+            
+            const incorrectAnswers = answeredQuestions.size - correctAnswers;
+            const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('incorrect-count').textContent = incorrectAnswers;
+            document.getElementById('score-percentage').textContent = scorePercentage + '%';
+            
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("click", function(e) {
+            // Handle answer button clicks
+            if (e.target.classList.contains("mcq-answer-btn")) {
+                const mcqId = e.target.getAttribute("data-mcq");
+                const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
+                answer.classList.toggle("hidden");
+                
+                // Toggle button text
+                if (answer.classList.contains("hidden")) {
+                    e.target.textContent = "View Answer";
+                } else {
+                    e.target.textContent = "Hide Answer";
+                    answer.classList.add('fade-in');
+                }
+            }
+            
+            // Handle MCQ option selection
+            if (e.target.classList.contains("mcq-option")) {
+                const mcqContainer = e.target.closest('[id^="mcq"]');
+                const mcqId = mcqContainer.id.replace('mcq', '');
+                const options = e.target.parentElement.querySelectorAll(".mcq-option");
+                
+                // Clear previous selections
+                options.forEach(opt => {
+                    opt.classList.remove("correct", "incorrect");
+                });
+                
+                // Mark all correct answers and the selected answer
+                let isCorrect = false;
+                options.forEach(opt => {
+                    if (opt.hasAttribute("data-correct")) {
+                        opt.classList.add("correct");
+                        if (opt === e.target) {
+                            isCorrect = true;
+                        }
+                    } else if (opt === e.target) {
+                        opt.classList.add("incorrect");
+                    }
+                });
+                
+                // Update progress if this question hasn't been answered before
+                if (!answeredQuestions.has(mcqId)) {
+                    answeredQuestions.add(mcqId);
+                    if (isCorrect) {
+                        correctAnswers++;
+                    }
+                    updateProgress();
+                }
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                html {
+                    scroll-behavior: smooth;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

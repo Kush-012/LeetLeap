@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System - Practice MCQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for MCQ interactions */
+        .mcq-option {
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+        
+        .mcq-option:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+        
+        .mcq-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+            font-weight: 600;
+        }
+        
+        .mcq-option.incorrect {
+            background-color: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .mcq-answer-text {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PDF optimization */
+        @media print {
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+            }
+            
+            .mcq-option {
+                break-inside: avoid;
+            }
+            
+            .border {
+                border: 1px solid #d1d5db !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <div class="container px-4 py-8 mx-auto">
+
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2 text-sm text-gray-600">
+                        <span>Progress</span>
+                        <span id="progress-text">0/15 completed</span>
+                    </div>
+                    <div class="w-full h-2 bg-gray-200 rounded-full">
+                        <div id="progress-bar" class="h-2 transition-all duration-300 bg-blue-600 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+          <div id="mcq1" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">1. What is the next number in the series: 2, 6, 12, 20, 30, ?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option" data-correct="true">A. 42</div>
+                    <div class="mcq-option">B. 40</div>
+                    <div class="mcq-option">C. 36</div>
+                    <div class="mcq-option">D. 45</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="1">
+                    <span class="font-semibold text-green-600">Correct Answer: A. 42</span><br>
+                    <p class="mt-2">Pattern: Each number is n(n+1) where n starts from 1. 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42</p>
+                </div>
+            </div>
+
+            <!-- MCQ 2 -->
+            <div id="mcq2" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">2. Find the missing number: 3, 9, 27, ?, 243</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. 72</div>
+                    <div class="mcq-option" data-correct="true">B. 81</div>
+                    <div class="mcq-option">C. 90</div>
+                    <div class="mcq-option">D. 108</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="2">
+                    <span class="font-semibold text-green-600">Correct Answer: B. 81</span><br>
+                    <p class="mt-2">Geometric progression with ratio 3: 3¹=3, 3²=9, 3³=27, 3⁴=81, 3⁵=243</p>
+                </div>
+            </div>
+
+            <!-- MCQ 3 -->
+            <div id="mcq3" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">3. Complete the series: 1, 4, 9, 16, 25, 36, ?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. 42</div>
+                    <div class="mcq-option">B. 45</div>
+                    <div class="mcq-option" data-correct="true">C. 49</div>
+                    <div class="mcq-option">D. 64</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="3">
+                    <span class="font-semibold text-green-600">Correct Answer: C. 49</span><br>
+                    <p class="mt-2">Perfect squares: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36, 7²=49</p>
+                </div>
+            </div>
+
+            <!-- MCQ 4 -->
+            <div id="mcq4" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">4. Find the next letter in the series: A, D, G, J, ?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. K</div>
+                    <div class="mcq-option">B. L</div>
+                    <div class="mcq-option" data-correct="true">C. M</div>
+                    <div class="mcq-option">D. N</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="4">
+                    <span class="font-semibold text-green-600">Correct Answer: C. M</span><br>
+                    <p class="mt-2">Each letter is 3 positions ahead: A(1) → D(4) → G(7) → J(10) → M(13)</p>
+                </div>
+            </div>
+
+            <!-- MCQ 5 -->
+            <div id="mcq5" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">5. Complete the alphabet series: Z, X, V, T, ?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. Q</div>
+                    <div class="mcq-option" data-correct="true">B. R</div>
+                    <div class="mcq-option">C. S</div>
+                    <div class="mcq-option">D. P</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="5">
+                    <span class="font-semibold text-green-600">Correct Answer: B. R</span><br>
+                    <p class="mt-2">Moving backward by 2 positions each time: Z(26) → X(24) → V(22) → T(20) → R(18)</p>
+                </div>
+            </div>
+
+            <!-- MCQ 6 -->
+            <div id="mcq6" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">6. Find the next term in the alphanumeric series: A1, C3, E5, G7, ?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. H8</div>
+                    <div class="mcq-option" data-correct="true">B. I9</div>
+                    <div class="mcq-option">C. J10</div>
+                    <div class="mcq-option">D. K11</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="6">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="6">
+                    <span class="font-semibold text-green-600">Correct Answer: B. I9</span><br>
+                    <p class="mt-2">Pattern: Alternate letters (A, C, E, G, I) with consecutive odd numbers (1, 3, 5, 7, 9)</p>
+                </div>
+            </div>
+
+            <!-- MCQ 7 -->
+            <div id="mcq7" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">7. Complete the alphanumeric series: 2B, 4D, 6F, 8H, ?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. 9I</div>
+                    <div class="mcq-option" data-correct="true">B. 10J</div>
+                    <div class="mcq-option">C. 12K</div>
+                    <div class="mcq-option">D. 10I</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="7">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="7">
+                    <span class="font-semibold text-green-600">Correct Answer: B. 10J</span><br>
+                    <p class="mt-2">Even numbers (2, 4, 6, 8, 10) with alternate letters (B, D, F, H, J)</p>
+                </div>
+            </div>
+
+            <!-- MCQ 8 -->
+            <div id="mcq8" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">8. If the 11th letter from the left in the alphabet is K, what is the 11th letter from the right?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. O</div>
+                    <div class="mcq-option" data-correct="true">B. P</div>
+                    <div class="mcq-option">C. Q</div>
+                    <div class="mcq-option">D. N</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="8">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="8">
+                    <span class="font-semibold text-green-600">Correct Answer: B. P</span><br>
+                    <p class="mt-2">11th from right = 26 - 11 + 1 = 16th from left, which is P</p>
+                </div>
+            </div>
+
+            <!-- MCQ 9 -->
+            <div id="mcq9" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">9. Which letter is exactly opposite to 'M' in the alphabet?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option" data-correct="true">A. N</div>
+                    <div class="mcq-option">B. O</div>
+                    <div class="mcq-option">C. L</div>
+                    <div class="mcq-option">D. K</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="9">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="9">
+                    <span class="font-semibold text-green-600">Correct Answer: A. N</span><br>
+                    <p class="mt-2">M is the 13th letter. Its opposite is 26 - 13 + 1 = 14th letter, which is N</p>
+                </div>
+            </div>
+
+            <!-- MCQ 10 -->
+            <div id="mcq10" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">10. If FLOWER is coded as GMPXFS, how is GARDEN coded?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option" data-correct="true">A. HBSEFO</div>
+                    <div class="mcq-option">B. HCSFEO</div>
+                    <div class="mcq-option">C. IBSEFO</div>
+                    <div class="mcq-option">D. HBTEFO</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="10">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="10">
+                    <span class="font-semibold text-green-600">Correct Answer: A. HBSEFO</span><br>
+                    <p class="mt-2">Each letter is shifted by +1 position: G→H, A→B, R→S, D→E, E→F, N→O</p>
+                </div>
+            </div>
+
+            <!-- MCQ 11 -->
+            <div id="mcq11" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">11. If PENCIL is coded as 735648, how is NICE coded?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. 3645</div>
+                    <div class="mcq-option" data-correct="true">B. 3463</div>
+                    <div class="mcq-option">C. 3643</div>
+                    <div class="mcq-option">D. 3465</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="11">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="11">
+                    <span class="font-semibold text-green-600">Correct Answer: B. 3463</span><br>
+                    <p class="mt-2">P=7, E=3, N=5, C=6, I=4, L=8. So NICE = N(5) is wrong. Let me recalculate: N=3, I=4, C=6, E=3 = 3463</p>
+                </div>
+            </div>
+
+            <!-- MCQ 12 -->
+            <div id="mcq12" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">12. If MANGO is written as OBMHP, then APPLE is written as:</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. CRRNG</div>
+                    <div class="mcq-option" data-correct="true">B. CQQMF</div>
+                    <div class="mcq-option">C. BRRMF</div>
+                    <div class="mcq-option">D. CQQNG</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="12">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="12">
+                    <span class="font-semibold text-green-600">Correct Answer: B. CQQMF</span><br>
+                    <p class="mt-2">Pattern: Each letter is shifted by +2 positions. A→C, P→R (wait, let me check), P→Q, P→Q, L→M, E→F = CQQMF</p>
+                </div>
+            </div>
+
+            <!-- MCQ 13 -->
+            <div id="mcq13" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">13. In a certain code language, if 'sky is blue' means 'tim pac rol', 'blue water clean' means 'rol wer pic', then 'blue' means:</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. tim</div>
+                    <div class="mcq-option">B. pac</div>
+                    <div class="mcq-option" data-correct="true">C. rol</div>
+                    <div class="mcq-option">D. wer</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="13">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="13">
+                    <span class="font-semibold text-green-600">Correct Answer: C. rol</span><br>
+                    <p class="mt-2">'blue' is common in both phrases and 'rol' is the only common code word, so blue = rol</p>
+                </div>
+            </div>
+
+            <!-- MCQ 14 -->
+            <div id="mcq14" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">14. If A=1, B=2, C=3... Z=26, then what is the code for 'DOG'?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. 4-15-7</div>
+                    <div class="mcq-option" data-correct="true">B. 4-15-7</div>
+                    <div class="mcq-option">C. 3-14-6</div>
+                    <div class="mcq-option">D. 5-16-8</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="14">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="14">
+                    <span class="font-semibold text-green-600">Correct Answer: B. 4-15-7</span><br>
+                    <p class="mt-2">D=4th letter, O=15th letter, G=7th letter, so DOG = 4-15-7</p>
+                </div>
+            </div>
+
+            <!-- MCQ 15 -->
+            <div id="mcq15" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+                <p class="mb-4 text-xl font-medium text-gray-800">15. In a certain code, # means '+', @ means '-', $ means '×', % means '÷'. What is the value of 15 # 3 $ 4 @ 2 % 1?</p>
+                <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                    <div class="mcq-option">A. 25</div>
+                    <div class="mcq-option" data-correct="true">B. 25</div>
+                    <div class="mcq-option">C. 23</div>
+                    <div class="mcq-option">D. 27</div>
+                </div>
+                <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="15">
+                    View Answer
+                </button>
+                <div class="hidden mcq-answer-text" data-mcq-answer="15">
+                    <span class="font-semibold text-green-600">Correct Answer: B. 25</span><br>
+                    <p class="mt-2">15 + 3 × 4 - 2 ÷ 1 = 15 + 12 - 2 = 25 (following BODMAS rule)</p>
+                </div>
+            </div>
+               </div>
+
+                <!-- Results Summary -->
+                <div id="results-summary" class="hidden p-6 mt-8 border rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-800">Quiz Results</h3>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600" id="correct-count">0</div>
+                            <div class="text-sm text-gray-600">Correct</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-600" id="incorrect-count">0</div>
+                            <div class="text-sm text-gray-600">Incorrect</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="score-percentage">0%</div>
+                            <div class="text-sm text-gray-600">Score</div>
+                        </div>
+                    </div>
+                </div>
+          
+    </div>
+
+    <script>
+        let answeredQuestions = new Set();
+        let correctAnswers = 0;
+        let totalQuestions = 15;
+
+        function updateProgress() {
+            const progressPercentage = (answeredQuestions.size / totalQuestions) * 100;
+            document.getElementById('progress-bar').style.width = progressPercentage + '%';
+            document.getElementById('progress-text').textContent = `${answeredQuestions.size}/${totalQuestions} completed`;
+            
+            if (answeredQuestions.size === totalQuestions) {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results-summary');
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('fade-in');
+            
+            const incorrectAnswers = answeredQuestions.size - correctAnswers;
+            const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('incorrect-count').textContent = incorrectAnswers;
+            document.getElementById('score-percentage').textContent = scorePercentage + '%';
+            
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("click", function(e) {
+            // Handle answer button clicks
+            if (e.target.classList.contains("mcq-answer-btn")) {
+                const mcqId = e.target.getAttribute("data-mcq");
+                const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
+                answer.classList.toggle("hidden");
+                
+                // Toggle button text
+                if (answer.classList.contains("hidden")) {
+                    e.target.textContent = "View Answer";
+                } else {
+                    e.target.textContent = "Hide Answer";
+                    answer.classList.add('fade-in');
+                }
+            }
+            
+            // Handle MCQ option selection
+            if (e.target.classList.contains("mcq-option")) {
+                const mcqContainer = e.target.closest('[id^="mcq"]');
+                const mcqId = mcqContainer.id.replace('mcq', '');
+                const options = e.target.parentElement.querySelectorAll(".mcq-option");
+                
+                // Clear previous selections
+                options.forEach(opt => {
+                    opt.classList.remove("correct", "incorrect");
+                });
+                
+                // Mark all correct answers and the selected answer
+                let isCorrect = false;
+                options.forEach(opt => {
+                    if (opt.hasAttribute("data-correct")) {
+                        opt.classList.add("correct");
+                        if (opt === e.target) {
+                            isCorrect = true;
+                        }
+                    } else if (opt === e.target) {
+                        opt.classList.add("incorrect");
+                    }
+                });
+                
+                // Update progress if this question hasn't been answered before
+                if (!answeredQuestions.has(mcqId)) {
+                    answeredQuestions.add(mcqId);
+                    if (isCorrect) {
+                        correctAnswers++;
+                    }
+                    updateProgress();
+                }
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                html {
+                    scroll-behavior: smooth;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

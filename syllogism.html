@@ -1,0 +1,456 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System - Practice MCQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for MCQ interactions */
+        .mcq-option {
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+        
+        .mcq-option:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+        
+        .mcq-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+            font-weight: 600;
+        }
+        
+        .mcq-option.incorrect {
+            background-color: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .mcq-answer-text {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PDF optimization */
+        @media print {
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+            }
+            
+            .mcq-option {
+                break-inside: avoid;
+            }
+            
+            .border {
+                border: 1px solid #d1d5db !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <div class="container px-4 py-8 mx-auto">
+
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2 text-sm text-gray-600">
+                        <span>Progress</span>
+                        <span id="progress-text">0/15 completed</span>
+                    </div>
+                    <div class="w-full h-2 bg-gray-200 rounded-full">
+                        <div id="progress-bar" class="h-2 transition-all duration-300 bg-blue-600 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+<div id="mcq1" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">1. All roses are flowers. Some flowers fade quickly. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All roses fade quickly</div>
+        <div class="mcq-option" data-correct="true">B. Some roses may fade quickly</div>
+        <div class="mcq-option">C. No roses fade quickly</div>
+        <div class="mcq-option">D. Some flowers are not roses</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="1">
+        <span class="font-semibold text-green-600">Correct Answer: B. Some roses may fade quickly</span><br>
+        <p class="mt-2">The conclusion follows as 'some' flowers that fade quickly could include roses.</p>
+    </div>
+</div>
+
+<div id="mcq2" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">2. No birds are mammals. All bats are mammals. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. Some bats are birds</div>
+        <div class="mcq-option" data-correct="true">B. No bats are birds</div>
+        <div class="mcq-option">C. All birds are bats</div>
+        <div class="mcq-option">D. Some mammals are not bats</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="2">
+        <span class="font-semibold text-green-600">Correct Answer: B. No bats are birds</span><br>
+        <p class="mt-2">Since no birds are mammals and all bats are mammals, bats cannot be birds.</p>
+    </div>
+</div>
+
+<div id="mcq3" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">3. Some cats are black. All black animals are nocturnal. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All cats are nocturnal</div>
+        <div class="mcq-option" data-correct="true">B. Some cats are nocturnal</div>
+        <div class="mcq-option">C. No cats are nocturnal</div>
+        <div class="mcq-option">D. All nocturnal animals are cats</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="3">
+        <span class="font-semibold text-green-600">Correct Answer: B. Some cats are nocturnal</span><br>
+        <p class="mt-2">The black cats (some cats) must be nocturnal since all black animals are nocturnal.</p>
+    </div>
+</div>
+
+<div id="mcq4" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">4. All students are learners. Some learners are teachers. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All teachers are students</div>
+        <div class="mcq-option">B. No teachers are students</div>
+        <div class="mcq-option" data-correct="true">C. Some teachers may be students</div>
+        <div class="mcq-option">D. All learners are teachers</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="4">
+        <span class="font-semibold text-green-600">Correct Answer: C. Some teachers may be students</span><br>
+        <p class="mt-2">The overlap between learners and teachers could include students.</p>
+    </div>
+</div>
+
+<div id="mcq5" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">5. No reptiles are mammals. All snakes are reptiles. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. Some snakes are mammals</div>
+        <div class="mcq-option" data-correct="true">B. No snakes are mammals</div>
+        <div class="mcq-option">C. All mammals are snakes</div>
+        <div class="mcq-option">D. Some mammals are reptiles</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="5">
+        <span class="font-semibold text-green-600">Correct Answer: B. No snakes are mammals</span><br>
+        <p class="mt-2">Since snakes are reptiles and no reptiles are mammals, snakes cannot be mammals.</p>
+    </div>
+</div>
+
+<div id="mcq6" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">6. All doctors are educated. Some educated people are researchers. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All researchers are doctors</div>
+        <div class="mcq-option">B. No doctors are researchers</div>
+        <div class="mcq-option" data-correct="true">C. Some doctors may be researchers</div>
+        <div class="mcq-option">D. All educated people are doctors</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="6">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="6">
+        <span class="font-semibold text-green-600">Correct Answer: C. Some doctors may be researchers</span><br>
+        <p class="mt-2">The overlap between educated people and researchers could include doctors.</p>
+    </div>
+</div>
+
+<div id="mcq7" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">7. Some books are novels. All novels are fiction. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All books are fiction</div>
+        <div class="mcq-option" data-correct="true">B. Some books are fiction</div>
+        <div class="mcq-option">C. No books are fiction</div>
+        <div class="mcq-option">D. All fiction are novels</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="7">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="7">
+        <span class="font-semibold text-green-600">Correct Answer: B. Some books are fiction</span><br>
+        <p class="mt-2">The books that are novels must be fiction since all novels are fiction.</p>
+    </div>
+</div>
+
+<div id="mcq8" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">8. All athletes are fit. No fit people are sedentary. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. Some sedentary people are athletes</div>
+        <div class="mcq-option" data-correct="true">B. No athletes are sedentary</div>
+        <div class="mcq-option">C. All fit people are athletes</div>
+        <div class="mcq-option">D. Some athletes are sedentary</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="8">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="8">
+        <span class="font-semibold text-green-600">Correct Answer: B. No athletes are sedentary</span><br>
+        <p class="mt-2">Since all athletes are fit and no fit people are sedentary, athletes cannot be sedentary.</p>
+    </div>
+</div>
+
+<div id="mcq9" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">9. Some politicians are honest. All honest people are trustworthy. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All politicians are trustworthy</div>
+        <div class="mcq-option" data-correct="true">B. Some politicians are trustworthy</div>
+        <div class="mcq-option">C. No politicians are trustworthy</div>
+        <div class="mcq-option">D. All trustworthy people are politicians</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="9">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="9">
+        <span class="font-semibold text-green-600">Correct Answer: B. Some politicians are trustworthy</span><br>
+        <p class="mt-2">The honest politicians must be trustworthy since all honest people are trustworthy.</p>
+    </div>
+</div>
+
+<div id="mcq10" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">10. No flowers are trees. All roses are flowers. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. Some roses are trees</div>
+        <div class="mcq-option" data-correct="true">B. No roses are trees</div>
+        <div class="mcq-option">C. All trees are roses</div>
+        <div class="mcq-option">D. Some trees are flowers</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="10">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="10">
+        <span class="font-semibold text-green-600">Correct Answer: B. No roses are trees</span><br>
+        <p class="mt-2">Since roses are flowers and no flowers are trees, roses cannot be trees.</p>
+    </div>
+</div>
+
+<div id="mcq11" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">11. All scientists are researchers. Some researchers are professors. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All professors are scientists</div>
+        <div class="mcq-option">B. No scientists are professors</div>
+        <div class="mcq-option" data-correct="true">C. Some scientists may be professors</div>
+        <div class="mcq-option">D. All researchers are professors</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="11">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="11">
+        <span class="font-semibold text-green-600">Correct Answer: C. Some scientists may be professors</span><br>
+        <p class="mt-2">The overlap between researchers and professors could include scientists.</p>
+    </div>
+</div>
+
+<div id="mcq12" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">12. Some birds can fly. All penguins are birds. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All penguins can fly</div>
+        <div class="mcq-option">B. No penguins can fly</div>
+        <div class="mcq-option" data-correct="true">C. Some birds cannot fly</div>
+        <div class="mcq-option">D. All flying creatures are birds</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="12">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="12">
+        <span class="font-semibold text-green-600">Correct Answer: C. Some birds cannot fly</span><br>
+        <p class="mt-2">Since penguins are birds and cannot fly, some birds cannot fly.</p>
+    </div>
+</div>
+
+<div id="mcq13" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">13. All lawyers must pass the bar exam. Some bar exam passers are not lawyers. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All bar exam passers are lawyers</div>
+        <div class="mcq-option" data-correct="true">B. Some people who pass the bar exam don't become lawyers</div>
+        <div class="mcq-option">C. No lawyers have passed the bar exam</div>
+        <div class="mcq-option">D. Only lawyers can pass the bar exam</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="13">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="13">
+        <span class="font-semibold text-green-600">Correct Answer: B. Some people who pass the bar exam don't become lawyers</span><br>
+        <p class="mt-2">This directly follows from the second premise.</p>
+    </div>
+</div>
+
+<div id="mcq14" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">14. No reptiles have fur. All mammals have fur. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. Some reptiles are mammals</div>
+        <div class="mcq-option" data-correct="true">B. No mammals are reptiles</div>
+        <div class="mcq-option">C. All furry animals are mammals</div>
+        <div class="mcq-option">D. Some mammals are reptiles</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="14">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="14">
+        <span class="font-semibold text-green-600">Correct Answer: B. No mammals are reptiles</span><br>
+        <p class="mt-2">Since mammals have fur and no reptiles have fur, they cannot overlap.</p>
+    </div>
+</div>
+
+<div id="mcq15" class="p-4 mb-6 transition-colors duration-200 border border-gray-200 rounded-lg hover:border-blue-300">
+    <p class="mb-4 text-xl font-medium text-gray-800">15. All A are B. Some B are C. Therefore:</p>
+    <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+        <div class="mcq-option">A. All A are C</div>
+        <div class="mcq-option">B. No A are C</div>
+        <div class="mcq-option" data-correct="true">C. Some A may be C</div>
+        <div class="mcq-option">D. All C are B</div>
+    </div>
+    <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="15">
+        View Answer
+    </button>
+    <div class="hidden mcq-answer-text" data-mcq-answer="15">
+        <span class="font-semibold text-green-600">Correct Answer: C. Some A may be C</span><br>
+        <p class="mt-2">There is a possibility that some A are C, but it's not certain from the given premises.</p>
+    </div>
+</div>
+  <!-- Results Summary -->
+                <div id="results-summary" class="hidden p-6 mt-8 border rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-800">Quiz Results</h3>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600" id="correct-count">0</div>
+                            <div class="text-sm text-gray-600">Correct</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-600" id="incorrect-count">0</div>
+                            <div class="text-sm text-gray-600">Incorrect</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="score-percentage">0%</div>
+                            <div class="text-sm text-gray-600">Score</div>
+                        </div>
+                    </div>
+                </div>
+          
+    </div>
+
+    <script>
+        let answeredQuestions = new Set();
+        let correctAnswers = 0;
+        let totalQuestions = 15;
+
+        function updateProgress() {
+            const progressPercentage = (answeredQuestions.size / totalQuestions) * 100;
+            document.getElementById('progress-bar').style.width = progressPercentage + '%';
+            document.getElementById('progress-text').textContent = `${answeredQuestions.size}/${totalQuestions} completed`;
+            
+            if (answeredQuestions.size === totalQuestions) {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results-summary');
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('fade-in');
+            
+            const incorrectAnswers = answeredQuestions.size - correctAnswers;
+            const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('incorrect-count').textContent = incorrectAnswers;
+            document.getElementById('score-percentage').textContent = scorePercentage + '%';
+            
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("click", function(e) {
+            // Handle answer button clicks
+            if (e.target.classList.contains("mcq-answer-btn")) {
+                const mcqId = e.target.getAttribute("data-mcq");
+                const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
+                answer.classList.toggle("hidden");
+                
+                // Toggle button text
+                if (answer.classList.contains("hidden")) {
+                    e.target.textContent = "View Answer";
+                } else {
+                    e.target.textContent = "Hide Answer";
+                    answer.classList.add('fade-in');
+                }
+            }
+            
+            // Handle MCQ option selection
+            if (e.target.classList.contains("mcq-option")) {
+                const mcqContainer = e.target.closest('[id^="mcq"]');
+                const mcqId = mcqContainer.id.replace('mcq', '');
+                const options = e.target.parentElement.querySelectorAll(".mcq-option");
+                
+                // Clear previous selections
+                options.forEach(opt => {
+                    opt.classList.remove("correct", "incorrect");
+                });
+                
+                // Mark all correct answers and the selected answer
+                let isCorrect = false;
+                options.forEach(opt => {
+                    if (opt.hasAttribute("data-correct")) {
+                        opt.classList.add("correct");
+                        if (opt === e.target) {
+                            isCorrect = true;
+                        }
+                    } else if (opt === e.target) {
+                        opt.classList.add("incorrect");
+                    }
+                });
+                
+                // Update progress if this question hasn't been answered before
+                if (!answeredQuestions.has(mcqId)) {
+                    answeredQuestions.add(mcqId);
+                    if (isCorrect) {
+                        correctAnswers++;
+                    }
+                    updateProgress();
+                }
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                html {
+                    scroll-behavior: smooth;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

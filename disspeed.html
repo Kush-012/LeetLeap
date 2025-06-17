@@ -1,0 +1,455 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System - Practice MCQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for MCQ interactions */
+        .mcq-option {
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+        
+        .mcq-option:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+        
+        .mcq-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+            font-weight: 600;
+        }
+        
+        .mcq-option.incorrect {
+            background-color: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .mcq-answer-text {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PDF optimization */
+        @media print {
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+            }
+            
+            .mcq-option {
+                break-inside: avoid;
+            }
+            
+            .border {
+                border: 1px solid #d1d5db !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <div class="container px-4 py-8 mx-auto">
+
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2 text-sm text-gray-600">
+                        <span>Progress</span>
+                        <span id="progress-text">0/15 completed</span>
+                    </div>
+                    <div class="w-full h-2 bg-gray-200 rounded-full">
+                        <div id="progress-bar" class="h-2 transition-all duration-300 bg-blue-600 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+ <div id="mcq1" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">1. A car travels 240 km in 4 hours. What is its speed in km/h?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 60 km/h</div>
+                <div class="mcq-option">B. 50 km/h</div>
+                <div class="mcq-option">C. 70 km/h</div>
+                <div class="mcq-option">D. 65 km/h</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="1">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="1">
+                <span class="font-semibold text-green-600">Correct Answer: A. 60 km/h</span><br>
+                <p class="mt-2">Speed = Distance ÷ Time<br>Speed = 240 km ÷ 4 hours = 60 km/h</p>
+            </div>
+        </div>
+
+        <div id="mcq2" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">2. Two trains are moving in opposite directions at speeds of 60 km/h and 40 km/h. What is their relative speed?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 20 km/h</div>
+                <div class="mcq-option" data-correct="true">B. 100 km/h</div>
+                <div class="mcq-option">C. 80 km/h</div>
+                <div class="mcq-option">D. 50 km/h</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="2">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="2">
+                <span class="font-semibold text-green-600">Correct Answer: B. 100 km/h</span><br>
+                <p class="mt-2">When two objects move in opposite directions, relative speed = Sum of individual speeds<br>Relative speed = 60 + 40 = 100 km/h</p>
+            </div>
+        </div>
+
+        <div id="mcq3" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">3. A person walks 15 km in 3 hours. How much time will he take to walk 25 km at the same speed?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 4 hours</div>
+                <div class="mcq-option" data-correct="true">B. 5 hours</div>
+                <div class="mcq-option">C. 6 hours</div>
+                <div class="mcq-option">D. 4.5 hours</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="3">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="3">
+                <span class="font-semibold text-green-600">Correct Answer: B. 5 hours</span><br>
+                <p class="mt-2">Speed = 15 km ÷ 3 hours = 5 km/h<br>Time = Distance ÷ Speed = 25 km ÷ 5 km/h = 5 hours</p>
+            </div>
+        </div>
+
+        <div id="mcq4" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">4. A train 120 meters long crosses a pole in 8 seconds. What is the speed of the train?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 48 km/h</div>
+                <div class="mcq-option" data-correct="true">B. 54 km/h</div>
+                <div class="mcq-option">C. 60 km/h</div>
+                <div class="mcq-option">D. 45 km/h</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="4">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="4">
+                <span class="font-semibold text-green-600">Correct Answer: B. 54 km/h</span><br>
+                <p class="mt-2">Speed = Distance ÷ Time = 120 m ÷ 8 s = 15 m/s<br>Converting to km/h: 15 × 3.6 = 54 km/h</p>
+            </div>
+        </div>
+
+        <div id="mcq5" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">5. Two cars start from the same point and travel in the same direction. Car A travels at 50 km/h and Car B at 70 km/h. After how much time will they be 60 km apart?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 2 hours</div>
+                <div class="mcq-option" data-correct="true">B. 3 hours</div>
+                <div class="mcq-option">C. 4 hours</div>
+                <div class="mcq-option">D. 2.5 hours</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="5">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="5">
+                <span class="font-semibold text-green-600">Correct Answer: B. 3 hours</span><br>
+                <p class="mt-2">Relative speed = 70 - 50 = 20 km/h<br>Time = Distance ÷ Relative speed = 60 km ÷ 20 km/h = 3 hours</p>
+            </div>
+        </div>
+
+        <div id="mcq6" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">6. A boat travels 30 km downstream in 2 hours and 18 km upstream in 3 hours. What is the speed of the boat in still water?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 12 km/h</div>
+                <div class="mcq-option">B. 10 km/h</div>
+                <div class="mcq-option">C. 15 km/h</div>
+                <div class="mcq-option">D. 9 km/h</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="6">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="6">
+                <span class="font-semibold text-green-600">Correct Answer: A. 12 km/h</span><br>
+                <p class="mt-2">Downstream speed = 30/2 = 15 km/h<br>Upstream speed = 18/3 = 6 km/h<br>Speed in still water = (15 + 6)/2 = 12 km/h</p>
+            </div>
+        </div>
+
+        <div id="mcq7" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">7. A man covers half of his journey at 40 km/h and the other half at 60 km/h. What is his average speed for the entire journey?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 50 km/h</div>
+                <div class="mcq-option" data-correct="true">B. 48 km/h</div>
+                <div class="mcq-option">C. 45 km/h</div>
+                <div class="mcq-option">D. 52 km/h</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="7">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="7">
+                <span class="font-semibold text-green-600">Correct Answer: B. 48 km/h</span><br>
+                <p class="mt-2">For equal distances: Average speed = 2xy/(x+y)<br>Average speed = (2 × 40 × 60)/(40 + 60) = 4800/100 = 48 km/h</p>
+            </div>
+        </div>
+
+        <div id="mcq8" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">8. Two trains of lengths 100m and 150m are running in opposite directions at speeds of 45 km/h and 55 km/h respectively. In what time will they cross each other?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 9 seconds</div>
+                <div class="mcq-option">B. 10 seconds</div>
+                <div class="mcq-option">C. 8 seconds</div>
+                <div class="mcq-option">D. 12 seconds</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="8">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="8">
+                <span class="font-semibold text-green-600">Correct Answer: A. 9 seconds</span><br>
+                <p class="mt-2">Total distance = 100 + 150 = 250m<br>Relative speed = 45 + 55 = 100 km/h = 100 × 5/18 = 27.78 m/s<br>Time = 250/27.78 = 9 seconds</p>
+            </div>
+        </div>
+
+        <div id="mcq9" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">9. A cyclist covers a distance of 750m in 2.5 minutes. What is his speed in km/h?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 18 km/h</div>
+                <div class="mcq-option">B. 20 km/h</div>
+                <div class="mcq-option">C. 15 km/h</div>
+                <div class="mcq-option">D. 22 km/h</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="9">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="9">
+                <span class="font-semibold text-green-600">Correct Answer: A. 18 km/h</span><br>
+                <p class="mt-2">Speed = 750m ÷ 2.5 min = 750m ÷ 150s = 5 m/s<br>Converting to km/h: 5 × 3.6 = 18 km/h</p>
+            </div>
+        </div>
+
+        <div id="mcq10" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">10. A and B start from the same point and walk in opposite directions. A walks at 4 km/h and B at 6 km/h. After how much time will they be 25 km apart?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 2 hours</div>
+                <div class="mcq-option" data-correct="true">B. 2.5 hours</div>
+                <div class="mcq-option">C. 3 hours</div>
+                <div class="mcq-option">D. 2.25 hours</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="10">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="10">
+                <span class="font-semibold text-green-600">Correct Answer: B. 2.5 hours</span><br>
+                <p class="mt-2">Combined speed = 4 + 6 = 10 km/h<br>Time = Distance ÷ Combined speed = 25 km ÷ 10 km/h = 2.5 hours</p>
+            </div>
+        </div>
+
+        <div id="mcq11" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">11. A car travels from A to B at 60 km/h and returns from B to A at 40 km/h. What is the average speed for the round trip?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 48 km/h</div>
+                <div class="mcq-option">B. 50 km/h</div>
+                <div class="mcq-option">C. 45 km/h</div>
+                <div class="mcq-option">D. 52 km/h</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="11">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="11">
+                <span class="font-semibold text-green-600">Correct Answer: A. 48 km/h</span><br>
+                <p class="mt-2">For round trip with equal distances: Average speed = 2xy/(x+y)<br>Average speed = (2 × 60 × 40)/(60 + 40) = 4800/100 = 48 km/h</p>
+            </div>
+        </div>
+
+        <div id="mcq12" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">12. A train running at 72 km/h crosses a platform 280m long in 25 seconds. What is the length of the train?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 180m</div>
+                <div class="mcq-option" data-correct="true">B. 220m</div>
+                <div class="mcq-option">C. 200m</div>
+                <div class="mcq-option">D. 250m</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="12">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="12">
+                <span class="font-semibold text-green-600">Correct Answer: B. 220m</span><br>
+                <p class="mt-2">Speed = 72 km/h = 72 × 5/18 = 20 m/s<br>Total distance = Speed × Time = 20 × 25 = 500m<br>Train length = 500 - 280 = 220m</p>
+            </div>
+        </div>
+
+        <div id="mcq13" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">13. Two persons A and B start simultaneously from opposite ends of a 200m track. A runs at 8 m/s and B at 12 m/s. When will they meet for the first time?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 10 seconds</div>
+                <div class="mcq-option">B. 12 seconds</div>
+                <div class="mcq-option">C. 8 seconds</div>
+                <div class="mcq-option">D. 15 seconds</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="13">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="13">
+                <span class="font-semibold text-green-600">Correct Answer: A. 10 seconds</span><br>
+                <p class="mt-2">Combined speed = 8 + 12 = 20 m/s<br>Time to meet = Distance ÷ Combined speed = 200m ÷ 20 m/s = 10 seconds</p>
+            </div>
+        </div>
+
+        <div id="mcq14" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">14. A man walks at a speed of 5 km/h to reach the office in time. If he walks at 4 km/h, he reaches 12 minutes late. What is the distance to his office?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option" data-correct="true">A. 4 km</div>
+                <div class="mcq-option">B. 5 km</div>
+                <div class="mcq-option">C. 3 km</div>
+                <div class="mcq-option">D. 6 km</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="14">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="14">
+                <span class="font-semibold text-green-600">Correct Answer: A. 4 km</span><br>
+                <p class="mt-2">Let distance = d km<br>Time at 5 km/h = d/5 hours<br>Time at 4 km/h = d/4 hours<br>d/4 - d/5 = 12/60 = 1/5<br>d(1/4 - 1/5) = 1/5<br>d(1/20) = 1/5<br>d = 4 km</p>
+            </div>
+        </div>
+
+        <div id="mcq15" class="p-4 mb-6 transition-colors duration-200 bg-white border border-gray-200 rounded-lg hover:border-blue-300">
+            <p class="mb-4 text-xl font-medium text-gray-800">15. A circular track has a circumference of 440m. Two runners start from the same point in the same direction. One runs at 8 m/s and the other at 6 m/s. After how much time will the faster runner lap the slower one?</p>
+            <div class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2">
+                <div class="mcq-option">A. 200 seconds</div>
+                <div class="mcq-option" data-correct="true">B. 220 seconds</div>
+                <div class="mcq-option">C. 240 seconds</div>
+                <div class="mcq-option">D. 180 seconds</div>
+            </div>
+            <button class="px-4 py-2 mt-4 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 mcq-answer-btn" data-mcq="15">
+                View Answer
+            </button>
+            <div class="hidden mcq-answer-text" data-mcq-answer="15">
+                <span class="font-semibold text-green-600">Correct Answer: B. 220 seconds</span><br>
+                <p class="mt-2">Relative speed = 8 - 6 = 2 m/s<br>Time to complete one lap ahead = Circumference ÷ Relative speed<br>Time = 440m ÷ 2 m/s = 220 seconds</p>
+            </div>
+        </div>
+         <div id="results-summary" class="hidden p-6 mt-8 border rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-800">Quiz Results</h3>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600" id="correct-count">0</div>
+                            <div class="text-sm text-gray-600">Correct</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-600" id="incorrect-count">0</div>
+                            <div class="text-sm text-gray-600">Incorrect</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="score-percentage">0%</div>
+                            <div class="text-sm text-gray-600">Score</div>
+                        </div>
+                    </div>
+                </div>
+          
+    </div>
+
+    <script>
+        let answeredQuestions = new Set();
+        let correctAnswers = 0;
+        let totalQuestions = 15;
+
+        function updateProgress() {
+            const progressPercentage = (answeredQuestions.size / totalQuestions) * 100;
+            document.getElementById('progress-bar').style.width = progressPercentage + '%';
+            document.getElementById('progress-text').textContent = `${answeredQuestions.size}/${totalQuestions} completed`;
+            
+            if (answeredQuestions.size === totalQuestions) {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results-summary');
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('fade-in');
+            
+            const incorrectAnswers = answeredQuestions.size - correctAnswers;
+            const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('incorrect-count').textContent = incorrectAnswers;
+            document.getElementById('score-percentage').textContent = scorePercentage + '%';
+            
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("click", function(e) {
+            // Handle answer button clicks
+            if (e.target.classList.contains("mcq-answer-btn")) {
+                const mcqId = e.target.getAttribute("data-mcq");
+                const answer = document.querySelector(`[data-mcq-answer="${mcqId}"]`);
+                answer.classList.toggle("hidden");
+                
+                // Toggle button text
+                if (answer.classList.contains("hidden")) {
+                    e.target.textContent = "View Answer";
+                } else {
+                    e.target.textContent = "Hide Answer";
+                    answer.classList.add('fade-in');
+                }
+            }
+            
+            // Handle MCQ option selection
+            if (e.target.classList.contains("mcq-option")) {
+                const mcqContainer = e.target.closest('[id^="mcq"]');
+                const mcqId = mcqContainer.id.replace('mcq', '');
+                const options = e.target.parentElement.querySelectorAll(".mcq-option");
+                
+                // Clear previous selections
+                options.forEach(opt => {
+                    opt.classList.remove("correct", "incorrect");
+                });
+                
+                // Mark all correct answers and the selected answer
+                let isCorrect = false;
+                options.forEach(opt => {
+                    if (opt.hasAttribute("data-correct")) {
+                        opt.classList.add("correct");
+                        if (opt === e.target) {
+                            isCorrect = true;
+                        }
+                    } else if (opt === e.target) {
+                        opt.classList.add("incorrect");
+                    }
+                });
+                
+                // Update progress if this question hasn't been answered before
+                if (!answeredQuestions.has(mcqId)) {
+                    answeredQuestions.add(mcqId);
+                    if (isCorrect) {
+                        correctAnswers++;
+                    }
+                    updateProgress();
+                }
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                html {
+                    scroll-behavior: smooth;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
