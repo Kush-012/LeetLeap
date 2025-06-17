@@ -3,62 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Analytical Skills</title>
+    <title>Contact Us - LeetLeap</title>
     <script src="https://cdn.tailwindcss.com/3.3.5"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .logo-animation {
+            transition: all 0.3s ease;
+        }
+        .logo-animation:hover {
+            transform: scale(1.05);
+            color: #2563eb;
+        }
+    </style>
 </head>
-<body class="min-h-screen bg-gray-50">
-    <?php include "header.php" ?>
-    
-    <div class="container max-w-full p-4 mx-auto">
-        <header class="p-8 mb-8 text-center shadow-lg bg-gradient-to-r from-blue-700 to-blue-900 rounded-xl">
-            <h1 class="text-4xl font-bold text-white">Contact Us</h1>
-            <p class="mt-4 text-xl text-blue-100">Send us a message via Gmail</p>
-        </header>
-        
-        <div class="max-w-2xl p-8 mx-auto bg-white rounded-lg shadow-md">
-            <form id="gmailForm" class="space-y-6">
-                <div>
-                    <label for="name" class="block mb-2 font-medium text-gray-700">Your Name</label>
-                    <input type="text" id="name" name="name" required 
-                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 border-b border-gray-200 shadow-sm navbar-blur">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center">
+                    <div class="flex items-center flex-shrink-0">
+                        <span class="text-2xl font-bold text-blue-600 cursor-pointer logo-animation"></></span>
+                        <span class="hidden ml-3 text-2xl font-semibold text-blue-600 sm:block">LeetLeap</span>
+                    </div>
                 </div>
-                
-                <div>
-                    <label for="subject" class="block mb-2 font-medium text-gray-700">Subject</label>
-                    <input type="text" id="subject" name="subject" required
-                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-baseline ml-10 space-x-4">
+                        <a href="index.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-home"></i> Home
+                        </a>
+                        <a href="mixed.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-tasks"></i> Practice
+                        </a>
+                        <a href="workbook.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-book-open"></i> Workbooks
+                        </a>
+                        <a href="about.html" class="px-3 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                            <i class="mr-1 fas fa-info-circle"></i> About
+                        </a>
+                    </div>
                 </div>
-                
-                <div>
-                    <label for="message" class="block mb-2 font-medium text-gray-700">Your Message</label>
-                    <textarea id="message" name="message" rows="6" required
-                              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+
+                <!-- CTA Button -->
+                <div class="justify-center sm:flex-row">
+                    <a href="index.html" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
+                        <i class="mr-2 fas fa-rocket"></i> Start Learning
+                    </a>
                 </div>
-                
-                <div class="text-center">
-                    <button type="submit" class="px-6 py-3 text-lg font-medium text-white bg-red-600 rounded-lg hover:bg-red-700">
-                        <i class="mr-2 fab fa-google"></i> Continue to Gmail
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 text-gray-700 transition-colors duration-200 rounded-md hover:text-blue-600">
+                        <i class="text-xl fas fa-bars"></i>
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
-    
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg md:hidden mobile-menu">
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-600"></></span>
+                    <span class="ml-2 text-lg font-semibold text-gray-800">Menu</span>
+                </div>
+                <button id="close-mobile-menu" class="p-1 text-gray-500 hover:text-gray-700">
+                    <i class="text-xl fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-4 space-y-2">
+                <a href="index.html" class="flex items-center px-3 py-2 font-semibold text-gray-700 transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-home"></i> Home
+                </a>
+                <a href="mixed.html" class="flex items-center px-3 py-2 font-semibold text-gray-700 transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-tasks"></i> Practice
+                </a>
+                <a href="workbook.html" class="flex items-center px-3 py-2 font-semibold text-gray-700 transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-book-open"></i> Workbooks
+                </a>
+                <a href="about.html" class="flex items-center px-3 py-2 font-semibold text-gray-700 transition-colors rounded-md hover:bg-blue-50 hover:text-blue-600">
+                    <i class="w-5 mr-3 fas fa-info-circle"></i> About
+                </a>
+                <div class="pt-4 border-t border-gray-200">
+                    <a href="index.html" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-600 rounded-lg hover:bg-blue-700">
+                        <i class="mr-2 fa-solid fa-play"></i> Start Learning
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu overlay -->
+        <div id="mobile-overlay" class="fixed inset-0 z-40 hidden bg-black bg-opacity-50 md:hidden"></div>
+    </nav>
+
+    <!-- Email Section -->
+    <section class="flex items-center justify-center min-h-screen bg-gray-50">
+        <div class="text-center">
+            <h2 class="mb-4 text-2xl font-bold text-gray-800">Contact Us</h2>
+            <p class="mb-2 text-lg text-gray-600">Reach out to us at:</p>
+            <a href="mailto:web20051b@gmail.com" class="text-lg font-semibold text-blue-600 transition-colors hover:text-blue-800">
+                web20051b@gmail.com
+            </a>
+        </div>
+    </section>
+
     <script>
-        document.getElementById('gmailForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            const fullBody = `From: ${name}\n\n${message}`;
-            
-            window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=kush2005m@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullBody)}`;
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenuFunc() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+        mobileOverlay.addEventListener('click', closeMobileMenuFunc);
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenuFunc();
+            }
         });
     </script>
-    
-    <?php include "footer.php" ?>
 </body>
 </html>
